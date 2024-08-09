@@ -1,3 +1,93 @@
 #root {
-  text-align: center;
+    text-align: center;
+}
+
+.page-container {
+    box-sizing: border-box;
+
+    width: 360px;
+    padding: 30px;
+    margin: 0 auto;
+
+}
+
+.header {
+    background-color: var(--color-white);
+    padding: 16px 30px;
+
+    .header-pc {
+        display: none;
+    }
+
+    .header-mobile{
+
+        display: flex;
+        justify-content: space-between;
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        border-bottom: 2px solid var(--color-gray-2);
+
+        transition: all .3s ease-in-out;
+
+        .main, .buttons{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--color-gray-4);
+        }
+
+        .buttons{
+            padding: 16px 0;
+
+            transition: all .3s ease-in-out;
+        }
+
+        .logo{
+            cursor: pointer;
+            transition: all .3s;
+        }
+
+        .logo:hover{
+            color: var(--color-black);
+        }
+
+        .button{
+            cursor: pointer;
+            transition: all .3s;
+        }
+
+        .button:hover{
+            color: var(--color-black);
+        }
+
+        .arrow{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .image{
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+    }
+
+}
+
+@media (min-width: 359px) {
+}
+
+@media (min-width: 479px) {
+}
+
+@media (min-width: 767px) {
+}
+
+@media (min-width: 959px) {
+}
+
+@media (min-width: 1199px) {
 }
