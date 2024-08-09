@@ -5,15 +5,18 @@
 .page-container {
     box-sizing: border-box;
 
-    width: 360px;
-    padding: 30px;
+    width: auto;
+    max-height: 480px;
+
+    padding: 0 30px;
     margin: 0 auto;
 
 }
 
 .header {
     background-color: var(--color-white);
-    padding: 16px 30px;
+
+    border-bottom: 2px solid var(--color-gray-2);
 
     .header-pc {
         display: none;
@@ -21,12 +24,14 @@
 
     .header-mobile {
 
-        max-height: 35px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+        max-height: 25px;
 
         display: flex;
         flex-direction: column;
-        gap: 10px;
-        border-bottom: 2px solid var(--color-gray-2);
+        gap: 20px;
         transition: max-height .3s ease-in-out;
 
 
@@ -38,7 +43,6 @@
         }
 
         .buttons {
-            padding: 16px 0;
             max-height: 0;
             opacity: 0;
             transform: translateY(-15px);
@@ -90,13 +94,81 @@
 }
 
 @media (min-width: 479px) {
+    .page-container {
+        max-width: 766px;
+        padding: 0 39px;
+    }
 }
 
 @media (min-width: 767px) {
+    .page-container {
+        max-width: 768px;
+    }
+
+    .header{
+        .header-mobile {
+            display: none;
+        }
+
+        .header-pc{
+            color: var(--color-gray-4);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+            padding: 18px 0;
+
+            .buttons{
+                display: flex;
+
+                .button{
+                    margin: 0 15px;
+                }
+            }
+
+            .logo {
+                cursor: pointer;
+                transition: all .3s;
+            }
+
+            .logo:hover {
+                color: var(--color-black);
+            }
+
+            .special-btn{
+                cursor: pointer;
+                transition: all .3s;
+            }
+
+            .special-btn:hover {
+                color: var(--color-black);
+            }
+
+            .button {
+                cursor: pointer;
+                transition: all .3s;
+            }
+
+            .button:hover {
+                color: var(--color-black);
+            }
+        }
+
+    }
+
+
 }
 
 @media (min-width: 959px) {
+    .page-container {
+        max-width: 960px;
+    }
 }
 
 @media (min-width: 1199px) {
+    .page-container {
+        max-width: 1200px;
+    }
 }
