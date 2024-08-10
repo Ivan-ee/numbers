@@ -13,7 +13,8 @@
 }
 
 .main-container {
-    background-color: #EDEDED;
+    background-color: var(--color-gray-1);
+
     margin-bottom: 50px;
 
     height: 660px;
@@ -99,7 +100,7 @@
 }
 
 .services {
-    background-color: #EDEDED;
+    background-color: var(--color-gray-1);
 
     margin-bottom: 50px;
 
@@ -189,6 +190,53 @@
             grid-area: third-block;
         }
 
+    }
+}
+
+.whyme {
+    background-color: var(--color-gray-1);
+
+    margin-bottom: 50px;
+    padding-bottom: 70px!important;
+
+    .title {
+        text-align: left;
+
+        color: var(--color-black);
+
+        padding-top: 70px;
+        margin-bottom: 28px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .block {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+
+            .image-container, .body {
+                width: calc(50% - 15px);
+            }
+
+            .image-container {
+                .image {
+                    position: relative;
+                    width: 100%;
+                }
+            }
+
+            .body {
+                text-align: left;
+
+                .top {
+                    margin-bottom: 16px;
+                }
+            }
+        }
     }
 }
 
@@ -282,9 +330,9 @@
             "first-block first-block"
             "second-block third-block";
 
-            .block{
-                .body{
-                    .text{
+            .block {
+                .body {
+                    .text {
                         margin-right: 0;
                     }
                 }
@@ -296,7 +344,7 @@
 
                 display: flex;
 
-                .image{
+                .image {
                     object-fit: cover;
                     object-position: center;
 
@@ -320,6 +368,16 @@
         }
     }
 
+    .whyme{
+        .content{
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .block{
+                width: calc(50% - 15px);
+            }
+        }
+    }
 
 }
 
@@ -331,6 +389,16 @@
 
     .main-container {
         max-width: 960px;
+    }
+
+    .whyme{
+        .content{
+            gap: 36px;
+
+            .block{
+                width: calc(50% - 18px);
+            }
+        }
     }
 }
 
@@ -349,15 +417,15 @@
 
             gap: 35px;
 
-            .block{
-                .body{
+            .block {
+                .body {
                     padding: 32px;
 
-                    .text{
-                        font-size: 16px!important;
+                    .text {
+                        font-size: 16px !important;
                     }
 
-                    .top, .price{
+                    .top, .price {
                         margin-bottom: 16px;
                     }
                 }
@@ -365,12 +433,23 @@
 
 
             .block:nth-child(1) {
-                .text{
+                .text {
                     margin-bottom: 96px;
                 }
 
             }
 
+        }
+    }
+
+    .whyme{
+        .content{
+
+            .block{
+               .text{
+                   margin-right: 40px;
+               }
+            }
         }
     }
 }
