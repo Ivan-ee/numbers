@@ -136,6 +136,8 @@
         gap: 30px;
 
         .block {
+            box-shadow: 0px 5.322045803070068px 21.288183212280273px rgba(0, 0, 0, 0.04);
+
             border-radius: 16px;
 
             .image {
@@ -172,6 +174,8 @@
                     background-color: var(--color-gray-1);
                     border-radius: 100px;
 
+                    color: var(--color-gray-4);
+
                     width: max-content;
 
                     padding: 16px 28px;
@@ -180,6 +184,13 @@
                     align-items: center;
 
                     transition: all .3s;
+                }
+
+                .button:hover {
+                    cursor: pointer;
+
+                    background-color: var(--color-gray-2);
+                    color: var(--color-black);
                 }
 
                 .button:active {
@@ -275,6 +286,8 @@
             background-image: url("./assets/images/slider/arrowR.png");
 
             transition: all .3s;
+
+            box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.04);
         }
 
         .slick-next:hover {
@@ -291,6 +304,8 @@
             background-image: url("./assets/images/slider/arrowL.png");
 
             transition: all .3s;
+
+            box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.04);
         }
 
         .slick-prev:hover {
@@ -349,6 +364,13 @@
                     justify-content: center;
 
                     transition: all .3s;
+                }
+
+                .button:hover {
+                    cursor: pointer;
+
+                    background-color: var(--color-gray-2);
+                    color: var(--color-black);
                 }
 
                 .button:active {
