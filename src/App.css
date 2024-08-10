@@ -197,7 +197,7 @@
     background-color: var(--color-gray-1);
 
     margin-bottom: 50px;
-    padding-bottom: 70px!important;
+    padding-bottom: 70px !important;
 
     .title {
         text-align: left;
@@ -240,6 +240,117 @@
     }
 }
 
+.slider {
+    background-color: var(--color-gray-1);
+
+    margin-bottom: 50px;
+    padding-bottom: 110px !important;
+
+    .title {
+        text-align: left;
+
+        color: var(--color-black);
+
+        padding-top: 70px;
+        margin-bottom: 28px;
+    }
+
+    .slider-container {
+        .slick-prev:before, .slick-next:before {
+            content: none;
+        }
+
+        .slick-next {
+            background-image: url("./assets/images/slider/arrowR.png");
+
+            transition: all .3s;
+        }
+
+        .slick-next:hover {
+            background-image: url("./assets/images/slider/arrowRH.png");
+            background-color: var(--color-gray-2) !important;
+        }
+
+        .slick-next:active {
+            background-image: url("./assets/images/slider/arrowRA.png");
+            background-color: var(--color-black) !important;
+        }
+
+        .slick-prev {
+            background-image: url("./assets/images/slider/arrowL.png");
+
+            transition: all .3s;
+        }
+
+        .slick-prev:hover {
+            background-image: url("./assets/images/slider/arrowLH.png");
+            background-color: var(--color-gray-2) !important;
+        }
+
+        .slick-prev:active {
+            background-image: url("./assets/images/slider/arrowLA.png");
+            background-color: var(--color-black) !important;
+        }
+    }
+
+    .content {
+        .block {
+            width: calc(100% - 20px) !important;
+            /*display: flex;*/
+            /*flex-direction: column;*/
+
+            border-radius: 32px;
+
+            .image {
+                border-top-right-radius: 32px;
+                border-top-left-radius: 32px;
+
+                height: auto;
+                width: 100%;
+                position: relative;
+            }
+
+            background-color: var(--color-white);
+
+            .body {
+                color: var(--color-black);
+
+                padding: 16px;
+
+                text-align: left;
+
+                .top {
+                    margin-bottom: 8px;
+                }
+
+                .text {
+                    margin-bottom: 16px;
+                }
+
+                .button {
+                    background-color: var(--color-gray-1);
+                    border-radius: 100px;
+
+                    padding: 16px 28px;
+
+                    color: var(--color-gray-4);
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    transition: all .3s;
+                }
+
+                .button:active {
+                    color: var(--color-white);
+                    background-color: var(--color-black);
+                }
+            }
+        }
+    }
+}
+
 @media (min-width: 359px) {
 }
 
@@ -254,6 +365,25 @@
             .body {
                 .text {
                     margin-right: 95px;
+                }
+            }
+        }
+    }
+
+    .slider {
+        .content {
+            .block {
+                .body {
+                    padding: 24px;
+
+                    .top {
+                        font-size: 24px !important;
+                    }
+
+                    .text {
+                        font-size: 16px !important;
+                        margin-bottom: 24px;
+                    }
                 }
             }
         }
@@ -368,13 +498,61 @@
         }
     }
 
-    .whyme{
-        .content{
+    .whyme {
+        .content {
             flex-direction: row;
             flex-wrap: wrap;
 
-            .block{
+            .block {
                 width: calc(50% - 15px);
+            }
+        }
+    }
+
+    .slider {
+        .content {
+            .block {
+                border-radius: 16px;
+
+
+                .image {
+                    border-top-right-radius: 16px;
+                    border-top-left-radius: 16px;
+
+                }
+
+                .body {
+                    padding: 16px;
+
+                    .top {
+                        margin-bottom: 4px;
+
+                        font-size: 16px !important;
+                    }
+
+                    .text {
+                        margin-bottom: 16px;
+
+                        font-size: 14px !important;
+                    }
+
+                    .button {
+                        width: min-content;
+                    }
+                }
+
+            }
+
+            .slider-container {
+                .slick-prev{
+                    top: -45px !important;
+                    left: 540px !important;
+                }
+
+                .slick-next{
+                    top: -45px !important;
+                    left: 625px !important;
+                }
             }
         }
     }
@@ -391,12 +569,42 @@
         max-width: 960px;
     }
 
-    .whyme{
-        .content{
+    .whyme {
+        .content {
             gap: 36px;
 
-            .block{
+            .block {
                 width: calc(50% - 18px);
+            }
+        }
+    }
+
+    .slider {
+        .content {
+
+            .block {
+                .body {
+                    padding: 24px;
+
+                    .top {
+                        font-size: 24px !important;
+                    }
+
+                    .text {
+                        font-size: 24px !important;
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+
+            .slider-container {
+                .slick-prev{
+                    left: 660px !important;
+                }
+
+                .slick-next{
+                    left: 745px !important;
+                }
             }
         }
     }
@@ -442,13 +650,30 @@
         }
     }
 
-    .whyme{
-        .content{
+    .whyme {
+        .content {
 
-            .block{
-               .text{
-                   margin-right: 40px;
-               }
+            .block {
+                .text {
+                    margin-right: 40px;
+                }
+            }
+        }
+    }
+
+    .slider {
+        .content {
+
+
+
+            .slider-container {
+                .slick-prev{
+                    left: 835px !important;
+                }
+
+                .slick-next{
+                    left: 910px !important;
+                }
             }
         }
     }
