@@ -56,9 +56,9 @@ export const Case = () => {
 
     const settings = {
         infinite: true,
-        speed: 500,
+        speed: 300,
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         nextArrow: <SampleNextArrow/>,
         prevArrow: <SamplePrevArrow/>,
         responsive: [
@@ -66,7 +66,7 @@ export const Case = () => {
                 breakpoint: 1200,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToScroll: 1,
                     infinite: true,
                 }
             },
