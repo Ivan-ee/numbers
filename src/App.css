@@ -21,6 +21,11 @@
 }
 
 .header {
+    position: sticky;
+    top: 0px;
+
+    z-index: 10;
+
     background-color: var(--color-white);
 
     border-bottom: 2px solid var(--color-gray-2);
@@ -83,6 +88,12 @@
             .image {
                 width: 25px;
                 height: 25px;
+
+                transition: all .3s ease-in-out;
+            }
+
+            .image.active{
+                transform: rotate(180deg);
             }
         }
     }

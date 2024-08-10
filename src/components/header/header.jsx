@@ -19,7 +19,7 @@ export const Header = () => {
                 <div className={'main'}>
                     <div className={'logo medium_h5'}>Numbers</div>
                     <div className={'arrow'} onClick={() => setIsOpen(!isOpen)}>
-                        <img className={'image'} src={arrow} alt="arrow"/>
+                        <img className={`image ${isOpen ? 'active' : ''}`} src={arrow} alt="arrow"/>
                     </div>
                 </div>
                 <div className={`buttons medium_h5 ${isOpen ? 'active' : ''}`}>
