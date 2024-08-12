@@ -4,6 +4,7 @@ import {Main} from "./components/main/main.jsx";
 import {Services} from "./components/services/services.jsx";
 import {WhyMe} from "./components/whyme/whyme.jsx";
 import {Case} from "./components/slider/slider.jsx";
+import {Test} from "./components/test/test.jsx";
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
             <Header/>
             <Main/>
             <Services/>
+            <Test/>
             <WhyMe/>
             <Case/>
         </>

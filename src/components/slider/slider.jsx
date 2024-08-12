@@ -1,11 +1,42 @@
-import image1 from '../../assets/images/slider/paylay.png'
-import image2 from '../../assets/images/slider/getbox.png'
-import image3 from '../../assets/images/slider/construct.png'
-import image4 from '../../assets/images/slider/site.png'
-
+import React, {useState} from 'react';
 import Slider from "react-slick";
+import {AnimatePresence, motion} from 'framer-motion';
+
+import image1 from '../../assets/images/slider/paylay.png';
+import image2 from '../../assets/images/slider/getbox.png';
+import image3 from '../../assets/images/slider/construct.png';
+import image4 from '../../assets/images/slider/site.png';
 
 export const Case = () => {
+    const [selectedId, setSelectedId] = useState(null);
+
+    const items = [
+        {
+            id: 1,
+            image: image1,
+            title: "GetBox",
+            description: "Сайт аренды боксов для хранения вещей"
+        },
+        {
+            id: 2,
+            image: image2,
+            title: "GetBox",
+            description: "Сайт аренды боксов для хранения вещей"
+        },
+        {
+            id: 3,
+            image: image3,
+            title: "GetBox",
+            description: "Сайт аренды боксов для хранения вещей"
+        },
+        {
+            id: 4,
+            image: image4,
+            title: "GetBox",
+            description: "Сайт аренды боксов для хранения вещей"
+        }
+    ];
+
 
     function SampleNextArrow(props) {
         const {className, style, onClick} = props;
@@ -53,7 +84,6 @@ export const Case = () => {
         );
     }
 
-
     const settings = {
         infinite: true,
         speed: 300,
@@ -77,8 +107,7 @@ export const Case = () => {
                     slidesToScroll: 1,
                     infinite: true,
                 }
-            },
-
+            }
         ]
     };
 
@@ -89,79 +118,32 @@ export const Case = () => {
             </div>
             <div className="content">
                 <div className="slider-container">
-
                     <Slider {...settings}>
-                        <div className="block">
-                            <img
-                                src={image1}
-                                className={'image'}
-                                alt={image1}/>
-                            <div className="body">
-                                <div className={'top medium_h3'}>
-                                    GetBox
-                                </div>
-                                <div className={'text medium_h5'}>
-                                    Сайт аренды боксов для хранения вещей
-                                </div>
-                                <div className={'button medium_h4'}>
-                                    <div>Выбрать</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="block">
-                            <img
-                                src={image2}
-                                className={'image'}
-                                alt={image1}/>
-                            <div className="body">
-                                <div className={'top medium_h3'}>
-                                    GetBox
-                                </div>
-                                <div className={'text medium_h5'}>
-                                    Сайт аренды боксов для хранения вещей
-                                </div>
-                                <div className={'button medium_h4'}>
-                                    <div>Выбрать</div>
+                        {items.map((item, index) => (
+                            <div className="block" key={index}>
+                                <img src={item.image} className={'image'} alt={item.title}/>
+                                <div className="body">
+                                    <div className={'top medium_h3'}>
+                                        {item.title}
+                                    </div>
+                                    <div className={'text medium_h5'}>
+                                        {item.description}
+                                    </div>
+                                    <div
+                                        className={'button medium_h4'}
+                                    >
+                                        <div>Выбрать</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="block">
-                            <img
-                                src={image3}
-                                className={'image'}
-                                alt={image1}/>
-                            <div className="body">
-                                <div className={'top medium_h3'}>
-                                    GetBox
-                                </div>
-                                <div className={'text medium_h5'}>
-                                    Сайт аренды боксов для хранения вещей
-                                </div>
-                                <div className={'button medium_h4'}>
-                                    <div>Выбрать</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="block">
-                            <img
-                                src={image4}
-                                className={'image'}
-                                alt={image1}/>
-                            <div className="body">
-                                <div className={'top medium_h3'}>
-                                    GetBox
-                                </div>
-                                <div className={'text medium_h5'}>
-                                    Сайт аренды боксов для хранения вещей
-                                </div>
-                                <div className={'button medium_h4'}>
-                                    <div>Выбрать</div>
-                                </div>
-                            </div>
-                        </div>
+                        ))}
                     </Slider>
                 </div>
             </div>
+
+            <AnimatePresence>
+                
+            </AnimatePresence>
         </div>
     );
 };
