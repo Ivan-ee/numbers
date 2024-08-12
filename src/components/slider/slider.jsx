@@ -2,38 +2,57 @@ import React, {useState} from 'react';
 import Slider from "react-slick";
 import {AnimatePresence, motion} from 'framer-motion';
 
-import image1 from '../../assets/images/slider/paylay.png';
-import image2 from '../../assets/images/slider/getbox.png';
-import image3 from '../../assets/images/slider/construct.png';
-import image4 from '../../assets/images/slider/site.png';
+import secure from '../../assets/images/qa/secure.png';
+import fast from '../../assets/images/qa/fast.png';
+import calendar from '../../assets/images/qa/calendar.png';
+import market from '../../assets/images/qa/maket.png';
+import support from '../../assets/images/qa/support.png';
+import language from '../../assets/images/qa/language.png';
 
-export const Case = () => {
+export const QA = () => {
     const [selectedId, setSelectedId] = useState(null);
 
     const items = [
         {
             id: 1,
-            image: image1,
-            title: "GetBox",
-            description: "Сайт аренды боксов для хранения вещей"
+            icon: calendar,
+            title: "Сроки",
+            description: "Лендинг — 1 неделя,<br/>Мультисайт — 2 недели,<br/>Интернет-магазин — от 2 до 4 недель",
+
         },
         {
             id: 2,
-            image: image2,
-            title: "GetBox",
-            description: "Сайт аренды боксов для хранения вещей"
+            icon: secure,
+            title: "Безопасность",
+            description: "Шифруем данные по SSL-сертификатам, чтобы их не украли или не подделали сайт. Настраиваем защиту против взломов\n" +
+                "и DDoS-атак. Регулярно делаем резервные копии данных",
         },
         {
             id: 3,
-            image: image3,
-            title: "GetBox",
-            description: "Сайт аренды боксов для хранения вещей"
+            icon: support,
+            title: "Поддержка",
+            description: "Обслуживаем сайт, чтобы он стабильно работал. Предлагаем два варианта поддержки сайта:<br/>" +
+                "<br/>1. Долгосрочный контракт  на обслуживание сайта" +
+                "<br/>2. Разовые запросы, когда появляется проблема",
         },
         {
             id: 4,
-            image: image4,
-            title: "GetBox",
-            description: "Сайт аренды боксов для хранения вещей"
+            icon: fast,
+            title: "Срочно",
+            description: "Если сайт нужен срочно, мы можем сделать его быстрее, например, использовать готовые шаблоны. Свяжитесь с нами, чтобы обсудить это",
+        },
+        {
+            id: 5,
+            icon: market,
+            title: "Дизайн",
+            description: "Делаем индивидуальный дизайн по вашим запросам. Можем использовать готовые шаблоны. Готовые шаблоны помогают быстрее запустить сайт и уменьшают затраты",
+        },
+        {
+            id: 6,
+            icon: language,
+            title: "Язык",
+            description: "Можем добавить поддержку других языков. Весь текст на сайте будет переведен на любой другой язык.\n" +
+                "Язык можно будет переключить",
         }
     ];
 
@@ -49,7 +68,7 @@ export const Case = () => {
                     backgroundSize: "50% 50%",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
-                    top: "113%",
+                    top: "125%",
                     right: "80px",
                     width: "56px",
                     height: "56px",
@@ -72,7 +91,7 @@ export const Case = () => {
                     backgroundSize: "50% 50%",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
-                    top: "113%",
+                    top: "125%",
                     left: "80px",
                     width: "56px",
                     height: "56px",
@@ -85,65 +104,80 @@ export const Case = () => {
     }
 
     const settings = {
-        infinite: true,
         speed: 300,
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
         nextArrow: <SampleNextArrow/>,
         prevArrow: <SamplePrevArrow/>,
+        infinite: false,
         responsive: [
             {
+                infinite: false,
                 breakpoint: 1200,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
-                    infinite: true,
                 }
             },
             {
+                infinite: false,
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    infinite: true,
                 }
             }
         ]
     };
 
     return (
-        <div className="page-container slider">
-            <div className="title medium_h1">
-                Кейсы
-            </div>
-            <div className="content">
-                <div className="slider-container">
-                    <Slider {...settings}>
-                        {items.map((item, index) => (
-                            <div className="block" key={index}>
-                                <img src={item.image} className={'image'} alt={item.title}/>
-                                <div className="body">
+        <>
+            <div className="page-container qa">
+                <div className="title medium_h1">
+                    Вопросы
+                </div>
+                <div className="content">
+                    <div className="slider-container">
+                        <Slider {...settings}>
+                            {items.map((item, index) => (
+                                <div
+                                    className="block"
+                                    key={item.id}
+                                >
                                     <div className={'top medium_h3'}>
-                                        {item.title}
+                                        <div>{item.title}</div>
+                                        <img src={item.icon} className={'icon'}/>
                                     </div>
-                                    <div className={'text medium_h5'}>
-                                        {item.description}
-                                    </div>
-                                    <div
-                                        className={'button medium_h4'}
-                                    >
-                                        <div>Выбрать</div>
+
+                                    <div className={'text medium_h4'} dangerouslySetInnerHTML={{ __html: item.description }}>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
-                    </Slider>
+                            ))}
+                        </Slider>
+                    </div>
                 </div>
             </div>
 
-            <AnimatePresence>
-                
-            </AnimatePresence>
-        </div>
+            {/*<AnimatePresence>*/}
+            {/*    {selectedId && (*/}
+            {/*        <motion.div*/}
+            {/*            layoutId={String(selectedId)}*/}
+            {/*            className="modal"*/}
+            {/*        >*/}
+            {/*            <motion.button*/}
+            {/*                onClick={() => setSelectedId(null)}*/}
+            {/*                style={{marginBottom: "10px"}}*/}
+            {/*            >*/}
+            {/*                Close*/}
+            {/*            </motion.button>*/}
+
+            {/*            <motion.iframe*/}
+            {/*                src={items.find(item => item.id === selectedId)?.url}*/}
+            {/*                className={'iframe'}*/}
+            {/*            />*/}
+            {/*        </motion.div>*/}
+            {/*    )}*/}
+            {/*</AnimatePresence>*/}
+        </>
     );
 };
