@@ -344,8 +344,8 @@
             background-color: var(--color-black) !important;
         }
 
-        .slick-disabled{
-            opacity: 0.6!important;
+        .slick-disabled {
+            opacity: 0.6 !important;
         }
     }
 
@@ -372,7 +372,7 @@
                 flex-direction: row;
                 justify-content: space-between;
 
-                .icon{
+                .icon {
                     width: 40px;
                     height: 40px;
                 }
@@ -392,7 +392,142 @@
         }
     }
 
+}
 
+.footer {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 50px;
+
+
+    gap: 24px;
+
+    .info {
+        border-radius: 16px;
+
+        padding: 24px;
+
+        background: linear-gradient(to right, #51C89E 0%, #52CC81 20%, #63D06B 40%, #74C857 60%, #80CB57 80%, #90D056 100%);
+
+        .title {
+            text-align: left;
+            color: var(--color-white);
+        }
+
+        .bottom {
+            color: var(--color-gray-2);
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            .image {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+    }
+
+    .form {
+
+        background-color: var(--color-white);
+
+        border-radius: 16px;
+
+        padding: 24px;
+
+        .title {
+            text-align: left;
+            color: var(--color-black);
+
+            margin-bottom: 12px;
+        }
+
+        .block {
+            display: flex;
+            flex-direction: column;
+
+            margin-bottom: 18px;
+
+            gap: 10px;
+
+
+            .textarea {
+                min-height: 80px;
+            }
+
+            .input {
+                border-radius: 8px;
+
+                color: var(--color-black);
+
+                padding: 12px 16px;
+
+                width: 100%;
+
+                box-sizing: border-box;
+
+                border: 2px solid var(--color-white);
+                outline: none;
+
+                transition: all .3s;
+            }
+
+            .input.error {
+                border: 2px solid #FF6666;
+            }
+
+            .input:hover {
+                border: 2px solid var(--color-gray-2);
+                box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.04);
+            }
+
+            .input:active, .input:focus {
+                border: 2px solid var(--color-black);
+            }
+
+            .input::placeholder {
+                color: var(--color-gray-3);
+                font-size: 14px;
+            }
+        }
+
+        .text {
+            color: var(--color-black);
+            font-weight: 500;
+            font-size: 14px;
+
+            margin-bottom: 18px;
+
+            text-align: left;
+
+            span {
+                text-decoration: underline;
+            }
+        }
+
+        .button {
+            background-color: var(--color-black);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: var(--color-white);
+
+            width: 100%;
+
+            padding: 16px 0;
+
+            border-radius: 100px;
+
+
+        }
+
+    }
 }
 
 @media (min-width: 359px) {
@@ -428,6 +563,29 @@
                         font-size: 16px !important;
                         margin-bottom: 24px;
                     }
+                }
+            }
+        }
+    }
+
+    .footer {
+        .info {
+            .title {
+                font-size: 24px !important;
+            }
+        }
+
+        .form {
+            .block {
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                .input {
+                    width: calc(50% - 5px);
+                }
+
+                .textarea {
+                    width: 100%;
                 }
             }
         }
@@ -601,6 +759,52 @@
         }
     }
 
+    .footer {
+        gap: 30px;
+
+        .info {
+            padding: 36px;
+        }
+
+        .form {
+            .title {
+                margin-bottom: 16px;
+            }
+
+            .block {
+                margin-bottom: 24px;
+                gap: 16px;
+
+                .input {
+                    width: calc(50% - 8px);
+                }
+
+                .textarea {
+                    width: 100%;
+                    min-height: 138px;
+                }
+            }
+
+            .form-bottom {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: flex-end;
+
+                .button {
+                    padding: 16px 24px;
+                    width: min-content;
+                }
+
+                .text {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+
+    }
+
 }
 
 @media (min-width: 959px) {
@@ -651,6 +855,53 @@
                 }
             }
         }
+    }
+
+    .footer {
+        flex-direction: row;
+
+        .info {
+            width: calc(50% - 15px);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .form {
+            width: calc(50% - 15px);
+            .title {
+                margin-bottom: 16px;
+            }
+
+            .block {
+                margin-bottom: 24px;
+                gap: 10px;
+
+                .input {
+                    width: calc(50% - 5px);
+                }
+
+            }
+
+            .form-bottom {
+                flex-direction: column;
+                gap: 16px;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                .button {
+                    padding: 16px 24px;
+                    width: min-content;
+                }
+
+                .text {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+
     }
 }
 
@@ -727,5 +978,39 @@
                 }
             }
         }
+    }
+
+    .footer {
+
+        .info {
+           .title{
+               font-size: 36px !important;
+           }
+        }
+
+        .form {
+            width: calc(50% - 15px);
+            .title {
+                margin-bottom: 16px;
+            }
+
+            .block {
+                margin-bottom: 24px;
+                gap: 10px;
+
+                .input {
+                    width: calc(50% - 5px);
+                }
+
+            }
+
+            .form-bottom {
+                flex-direction: row-reverse;
+                gap: 0;
+                align-items: flex-end;
+            }
+        }
+
+
     }
 }
