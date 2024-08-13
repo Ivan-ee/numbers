@@ -276,7 +276,7 @@
     left: 0;
     bottom: 0;
 
-    padding: 1rem;
+    padding: 2rem 30px;
 
     background-color: rgba(0, 0, 0, 0.2);
 
@@ -299,7 +299,7 @@
         border: none;
     }
 
-    .button{
+    .button {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -309,6 +309,9 @@
         padding: 16px 0;
         width: 100%;
         border-radius: 100px;
+
+        font-size: 16px;
+        font-weight: 500;
 
         transition: all 0.3s;
     }
@@ -493,9 +496,16 @@
                     transition: all .3s;
                 }
 
+                .button:hover {
+                    cursor: pointer;
+
+                    background-color: var(--color-gray-2);
+                    color: var(--color-black);
+                }
+
                 .button:active {
-                    background-color: var(--color-black);
                     color: var(--color-white);
+                    background-color: var(--color-black);
                 }
             }
         }
@@ -749,10 +759,8 @@
         }
     }
 
-    .modal {
-        .iframe {
-            width: 32rem;
-        }
+    .modal{
+        padding: 2rem 39px;
     }
 
     .footer {
@@ -946,6 +954,41 @@
         }
     }
 
+    .modal {
+        padding: 4rem 39px;
+
+        .iframe{
+            max-width: 690px;
+        }
+
+        .button{
+            max-width: 690px;
+        }
+    }
+
+    .case{
+        .content{
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            gap: 30px;
+
+            .block{
+                width: calc(50% - 15px);
+
+                .body{
+                    .text{
+                        font-size: 16px !important;
+                    }
+                    .button{
+                        padding: 16px 24px;
+                        width: min-content;
+                    }
+                }
+            }
+        }
+    }
+
     .footer {
         gap: 30px;
 
@@ -1041,6 +1084,18 @@
                     left: 745px !important;
                 }
             }
+        }
+    }
+
+    .modal {
+        padding: 4rem 39px;
+
+        .iframe{
+            max-width: 810px;
+        }
+
+        .button{
+            max-width: 810px;
         }
     }
 
@@ -1169,6 +1224,18 @@
                     left: 910px !important;
                 }
             }
+        }
+    }
+
+    .modal {
+        padding: 4rem 115px;
+
+        .iframe{
+            max-width: 1200px;
+        }
+
+        .button{
+            max-width: 1200px;
         }
     }
 

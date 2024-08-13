@@ -83,7 +83,7 @@ export const Case = () => {
 
                             <motion.iframe
                                 src={items.find(item => item.id === selectedId)?.url}
-                                className={'iframe'}
+                                className={'iframe '}
                             />
                         </motion.div>
                     )}
