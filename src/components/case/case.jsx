@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {AnimatePresence, motion} from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 import image1 from '../../assets/images/case/paylay.png';
 import image2 from '../../assets/images/case/getboxx.png';
@@ -8,6 +8,7 @@ import image4 from '../../assets/images/case/site.png';
 
 export const Case = () => {
     const [selectedId, setSelectedId] = useState(null);
+    const modalRef = useRef(null);
 
     const items = [
         {
@@ -15,30 +16,54 @@ export const Case = () => {
             image: image2,
             title: "GetBox",
             description: "Сайт аренды боксов для хранения вещей",
-            url: "http://localhost:5173/"
+            url: "https://getboxx.ru/"
         },
         {
             id: 2,
             image: image1,
             title: "PayLay",
             description: "Сайт по приему платежей",
-            url: "http://localhost:5173/"
+            url: "https://paylay.ru/"
         },
         {
             id: 3,
             image: image3,
             title: "Construct",
             description: "Сайт строительной компании",
-            url: "http://localhost:5173/"
+            url: "https://getboxx.ru/"
         },
         {
             id: 4,
             image: image4,
             title: "Site",
             description: "Интернет-магазин",
-            url: "http://localhost:5173/"
+            url: "https://getboxx.ru/"
         }
     ];
+
+    const handleKeyDown = (e) => {
+        if (e.key === 'Escape') {
+            setSelectedId(null);
+        }
+    };
+
+    const handleClickOutside = (e) => {
+        // Проверяем, что клик произошел по элементу с классом 'modal'
+        if (modalRef.current && e.target.classList.contains('modal')) {
+            setSelectedId(null);
+        }
+    };
+
+    useEffect(() => {
+        if (selectedId) {
+            document.addEventListener('keydown', handleKeyDown);
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown);
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [selectedId]);
 
     return (
         <div className="page-container case">
@@ -63,7 +88,6 @@ export const Case = () => {
                                 onClick={() => setSelectedId(item.id)}
                             >
                                 <motion.div>Выбрать</motion.div>
-
                             </motion.div>
                         </motion.div>
                     </motion.div>
@@ -73,6 +97,7 @@ export const Case = () => {
                         <motion.div
                             layoutId={String(selectedId)}
                             className="modal"
+                            ref={modalRef}
                         >
                             <motion.div
                                 onClick={() => setSelectedId(null)}
