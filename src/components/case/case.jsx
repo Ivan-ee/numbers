@@ -48,7 +48,6 @@ export const Case = () => {
     };
 
     const handleClickOutside = (e) => {
-        // Проверяем, что клик произошел по элементу с классом 'modal'
         if (modalRef.current && e.target.classList.contains('modal')) {
             setSelectedId(null);
         }
