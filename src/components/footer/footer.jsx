@@ -4,6 +4,8 @@ import {SuccessModal} from "../Success.jsx";
 
 
 export const Footer = () => {
+    const currentYear = new Date().getFullYear();
+
     const [isSuccessModalVisible, setSuccessModalVisible] = useState(false);
 
     const [name, setName] = useState('');
@@ -48,7 +50,7 @@ export const Footer = () => {
                         ваш проект
                     </div>
                     <div className="bottom medium_h5">
-                        <div>© Numbers, 2024</div>
+                        <div>© Numbers, {currentYear}</div>
                         <img src={telegram} alt={telegram} className="image"/>
                     </div>
                 </div>
@@ -67,7 +69,7 @@ export const Footer = () => {
                         />
                         <input
                             type="tel"
-                            className={`input ${errors.name ? 'error' : ''}`}
+                            className={`input ${errors.phone ? 'error' : ''}`}
                             placeholder="Телефон"
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}

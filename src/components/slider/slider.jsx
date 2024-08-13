@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Slider from "react-slick";
-import {AnimatePresence, motion} from 'framer-motion';
 
 import secure from '../../assets/images/qa/secure.png';
 import fast from '../../assets/images/qa/fast.png';
@@ -10,7 +9,6 @@ import support from '../../assets/images/qa/support.png';
 import language from '../../assets/images/qa/language.png';
 
 export const QA = () => {
-    const [selectedId, setSelectedId] = useState(null);
 
     const items = [
         {
