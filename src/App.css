@@ -331,8 +331,8 @@
 
 .qa {
 
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
 
     padding-bottom: 50px !important;
 
