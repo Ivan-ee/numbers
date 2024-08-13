@@ -295,6 +295,22 @@
 
         border: none;
 
+        .top{
+            display: flex;
+            justify-content: space-between;
+
+            .image{
+                width: 44px;
+                height: 44px;
+
+                cursor: pointer;
+            }
+
+            .image:hover{
+                opacity: 0.8;
+            }
+        }
+
         .body{
             padding: 24px;
 
@@ -369,6 +385,10 @@
                 color: var(--color-black);
                 text-align: left;
                 margin-bottom: 16px;
+
+                span{
+                    text-decoration: underline;
+                }
             }
 
             .button {
@@ -949,6 +969,45 @@
             }
         }
     }
+
+    .modal-wrapper {
+        .modal-service{
+            max-width: 480px;
+            .body{
+                padding: 32px;
+
+                .top{
+                    .title{
+                        font-size: 24px !important;
+                    }
+
+                    .desc{
+                        margin-bottom: 28px;
+
+                    }
+                }
+
+                .block{
+                    flex-direction: row;
+                    flex-wrap: wrap;
+
+                    margin-bottom: 28px;
+                    .input{
+                        width: calc(50% - 5px);
+                    }
+
+                    .textarea{
+                        width: 100%;
+                    }
+                }
+
+                .text{
+                    margin-bottom: 20px;
+                }
+
+            }
+        }
+    }
 }
 
 @media (min-width: 767px) {
@@ -1198,6 +1257,37 @@
         }
 
 
+    }
+
+    .modal-wrapper {
+        .modal-service{
+            max-width: 690px;
+            .body{
+
+                .top{
+                    .title{
+                        font-size: 36px !important;
+                    }
+                }
+
+                .form-bottom{
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: space-between;
+                    align-items: flex-end;
+
+                    .button{
+                        width: min-content;
+                        padding: 16px 28px;
+                    }
+                }
+
+                .text{
+                    margin-bottom: 0;
+                }
+
+            }
+        }
     }
 
 }

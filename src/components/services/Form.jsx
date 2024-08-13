@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 
+import close from '../../assets/images/close2.png'
+
 export const Form = ({show, onCloseButtonClick, type, color, onSuccess}) => {
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
@@ -53,15 +55,24 @@ export const Form = ({show, onCloseButtonClick, type, color, onSuccess}) => {
         <div className="modal-wrapper" onClick={handleOverlayClick}>
             <div className="modal-service" onClick={handleModalClick}>
                 <div className={` ${color}  color-top`}></div>
-                {/*<div className={` color-green  color-top`}></div>*/}
                 <div className="body">
                     <div className="top">
-                        <div className="title regular_h3">
-                            {data[type]}
+                        <div>
+                            <div className="title regular_h3">
+                                {data[type]}
+                            </div>
+                            <div className="desc regular_h5">
+                                Заполните данные
+                            </div>
                         </div>
-                        <div className="desc regular_h5">
-                            Заполните данные
-                        </div>
+
+                        <img
+                            src={close}
+                            alt="close"
+                            className={'image'}
+                            onClick={onCloseButtonClick}
+                        />
+
                     </div>
                     <div className={'block'}>
                         <input
