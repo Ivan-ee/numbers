@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import React, {useState, useEffect, useRef} from 'react';
+import {AnimatePresence, motion} from 'framer-motion';
 
 import image1 from '../../assets/images/case/paylay.png';
 import image2 from '../../assets/images/case/getboxx.png';

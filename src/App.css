@@ -262,6 +262,165 @@
     }
 }
 
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    padding: 2rem 30px;
+
+    background-color: rgba(0, 0, 0, 0.2);
+
+    z-index: 9999;
+    opacity: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    .modal-service {
+        background-color: var(--color-gray-1);
+        border-radius: 16px;
+        box-sizing: border-box;
+
+        width: 100vw;
+
+        position: relative;
+        padding: 0;
+
+        border: none;
+
+        .body{
+            padding: 24px;
+
+            .title{
+                font-size: 20px;
+                text-align: left;
+                color: var(--color-black);
+
+                margin-bottom: 6px;
+            }
+
+            .desc{
+                font-size: 14px;
+                text-align: left;
+                color: var(--color-black);
+
+                margin-bottom: 24px;
+            }
+
+            .block {
+                display: flex;
+                flex-direction: column;
+
+                margin-bottom: 24px;
+
+                gap: 10px;
+
+
+                .textarea {
+                    min-height: 100px;
+                }
+
+                .input {
+                    border-radius: 8px;
+
+                    color: var(--color-black);
+
+                    padding: 12px 16px;
+
+                    width: 100%;
+
+                    box-sizing: border-box;
+
+                    border: 2px solid var(--color-white);
+                    outline: none;
+
+                    transition: all .3s;
+                }
+
+                .input.error {
+                    border: 2px solid #FF6666;
+                }
+
+                .input:hover {
+                    border: 2px solid var(--color-gray-2);
+                    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.04);
+                }
+
+                .input:active, .input:focus {
+                    border: 2px solid var(--color-black);
+                }
+
+                .input::placeholder {
+                    color: var(--color-gray-3);
+                    font-size: 14px;
+                }
+            }
+
+            .text{
+                font-size: 14px;
+                font-weight: 500;
+                color: var(--color-black);
+                text-align: left;
+                margin-bottom: 16px;
+            }
+
+            .button {
+                cursor: pointer;
+
+                background-color: var(--color-black);
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                color: var(--color-white);
+
+                width: 100%;
+
+                padding: 16px 0;
+
+                border-radius: 100px;
+
+                transition: all .3s;
+            }
+
+            .button:active {
+                background-color: var(--color-gray-4);
+                color: var(--color-white);
+            }
+        }
+
+
+
+        .color-top {
+            border-top-right-radius: 16px;
+            border-top-left-radius: 16px;
+
+            height: 80px;
+        }
+
+        .green {
+            background: linear-gradient(to right, #51C89E 0%, #52CC81 20%, #63D06B 40%, #74C857 60%, #80CB57 80%, #90D056 100%) !important;
+        }
+
+        .red {
+            background: linear-gradient(to right, #FF8451 0%, #FF7A59 20%, #FF745D 40%, #FF6C64 60%, #F86D72 80%, #ED6F87 100%) !important;
+        }
+
+        .orange {
+            background: linear-gradient(to right, #FFD80D 1%, #EC940F 100%) !important;
+        }
+    }
+
+}
+
 .modal {
     display: flex;
     flex-direction: column-reverse;
