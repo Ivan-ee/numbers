@@ -121,12 +121,11 @@
 
         color: var(--color-black);
 
-        padding-top: 70px;
         margin-bottom: 28px;
     }
 
     .content {
-        padding-bottom: 70px;
+        padding-bottom: 70px!important;
         display: grid;
 
         grid-template-areas:
@@ -226,7 +225,6 @@
 
         color: var(--color-black);
 
-        padding-top: 70px;
         margin-bottom: 28px;
     }
 
@@ -509,17 +507,16 @@
 
 .qa {
 
+    padding-bottom: 130px!important;
     border-bottom-left-radius: 32px;
     border-bottom-right-radius: 32px;
 
-    padding-bottom: 50px !important;
 
     .title {
         text-align: left;
 
         color: var(--color-black);
 
-        padding-top: 70px;
         margin-bottom: 32px;
     }
 
@@ -615,12 +612,12 @@
 }
 
 .case {
+    padding-bottom: 70px!important;
     .title {
         text-align: left;
 
         color: var(--color-black);
 
-        padding-top: 70px;
         margin-bottom: 32px;
     }
 
@@ -912,12 +909,12 @@
 }
 
 .process {
+    padding-bottom: 70px!important;
     .title {
         text-align: left;
 
         color: var(--color-black);
 
-        padding-top: 70px;
         margin-bottom: 32px;
     }
 

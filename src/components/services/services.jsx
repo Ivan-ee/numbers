@@ -5,6 +5,7 @@ import {SuccessModal} from "../Success.jsx";
 import {Form} from "./Form.jsx";
 import {useModal} from "./useModal.jsx";
 import {useState} from "react";
+import {motion} from "framer-motion";
 
 export const Services = () => {
     const [isShowingModal, toggleModal] = useModal();
@@ -28,14 +29,19 @@ export const Services = () => {
 
     return (
         <>
-            <Form show={isShowingModal} onCloseButtonClick={toggleModal} type={selectedType} color={selectedColor} onSuccess={handleSuccess}/>
+            <Form show={isShowingModal} onCloseButtonClick={toggleModal} type={selectedType} color={selectedColor}
+                  onSuccess={handleSuccess}/>
             <SuccessModal show={isSuccessModalVisible} onClose={handleCloseSuccessModal}/>
-            <div className="page-container services">
+            <div
+                className="page-container services">
                 <div className="title medium_h1">
                     Услуги
                 </div>
-                <div className="content">
-                    <div className="block">
+                <div
+                    className="content">
+                    <div
+
+                        className="block">
                         <img
                             src={image1}
                             className={'image'}
@@ -59,7 +65,8 @@ export const Services = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="block">
+                    <div
+                        className="block">
                         <img src={image2} className={'image'} alt={image2}/>
                         <div className="body">
                             <div className={'top medium_h2'}>
@@ -74,12 +81,13 @@ export const Services = () => {
                             <div className={'price medium_h2'}>
                                 от 100 000 ₽
                             </div>
-                            <div className={'button medium_h4'} onClick={() => handleRentClick('multisite','red')}>
+                            <div className={'button medium_h4'} onClick={() => handleRentClick('multisite', 'red')}>
                                 <div>Выбрать</div>
                             </div>
                         </div>
                     </div>
-                    <div className="block">
+                    <div
+                        className="block">
                         <img src={image3} className={'image'} alt={image3}/>
                         <div className="body">
                             <div className={'top medium_h2'}>
@@ -95,7 +103,7 @@ export const Services = () => {
                             <div className={'price medium_h2'}>
                                 от 190 000 ₽
                             </div>
-                            <div className={'button medium_h4'} onClick={() => handleRentClick('ecommerce','orange')}>
+                            <div className={'button medium_h4'} onClick={() => handleRentClick('ecommerce', 'orange')}>
                                 <div>Выбрать</div>
                             </div>
                         </div>

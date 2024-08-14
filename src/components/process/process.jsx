@@ -6,11 +6,11 @@ import image5 from '../../assets/images/process/Icon/mobile-support.png'
 import image6 from '../../assets/images/process/Icon/mobile-layout.png'
 
 import {fadeIn} from "../variants.js";
-import {motion} from "framer-motion";
+import {motion, useScroll, useTransform} from "framer-motion";
+import {useRef} from "react";
 
 
 export const Process = () => {
-
     const viewport = {once: true, amount: 0}
 
     return (
@@ -18,8 +18,7 @@ export const Process = () => {
             <div className="title medium_h1">
                 Процесс
             </div>
-            <motion.div
-                className="content">
+            <div className="content">
                 <motion.div
                     className="block"
                     variants={fadeIn("up", 0)}
@@ -118,7 +117,7 @@ export const Process = () => {
                         после разработки
                     </div>
                 </motion.div>
-            </motion.div>
+            </div>
         </div>
     )
 };
