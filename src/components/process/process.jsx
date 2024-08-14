@@ -5,15 +5,28 @@ import image4 from '../../assets/images/process/Icon/mobile-done.png'
 import image5 from '../../assets/images/process/Icon/mobile-support.png'
 import image6 from '../../assets/images/process/Icon/mobile-layout.png'
 
+import {fadeIn} from "../variants.js";
+import {motion} from "framer-motion";
+
 
 export const Process = () => {
+
+    const viewport = {once: true, amount: 0}
+
     return (
         <div className="page-container process">
             <div className="title medium_h1">
                 Процесс
             </div>
-            <div className="content">
-                <div className="block">
+            <motion.div
+                className="content">
+                <motion.div
+                    className="block"
+                    variants={fadeIn("up", 0)}
+                    initial="hidden"
+                    whileInView={'show'}
+                    viewport={viewport}
+                >
                     <div className="top">
                         <div className={'number medium_h1'}>1</div>
                         <img src={image3} className={'image'} alt={image2}/>
@@ -22,8 +35,13 @@ export const Process = () => {
                         Обсуждаем, что будем делать.
                         Ставим цели, задачи
                     </div>
-                </div>
-                <div className="block">
+                </motion.div>
+                <motion.div className="block"
+                            variants={fadeIn("up", 0)}
+                            initial="hidden"
+                            whileInView={'show'}
+                            viewport={viewport}
+                >
                     <div className="top">
                         <div className={'number medium_h1'}>2</div>
                         <img src={image6} className={'image'} alt={image2}/>
@@ -33,8 +51,14 @@ export const Process = () => {
                         Делаем макет сайта.
                         Согласовываем, дорабатываем
                     </div>
-                </div>
-                <div className="block">
+                </motion.div>
+                <motion.div
+                    className="block"
+                    variants={fadeIn("up", 0)}
+                    initial="hidden"
+                    whileInView={'show'}
+                    viewport={viewport}
+                >
                     <div className="top">
                         <div className={'number medium_h1'}>3</div>
 
@@ -42,11 +66,17 @@ export const Process = () => {
 
                     </div>
                     <div className="text medium_h4">
-                    Верстаем, пишем код,
+                        Верстаем, пишем код,
                         разрабатываем
                     </div>
-                </div>
-                <div className="block">
+                </motion.div>
+                <motion.div
+                    className="block"
+                    variants={fadeIn("up", 0)}
+                    initial="hidden"
+                    whileInView={'show'}
+                    viewport={viewport}
+                >
                     <div className="top">
                         <div className={'number medium_h1'}>4</div>
                         <img src={image2} className={'image'} alt={image2}/>
@@ -55,19 +85,29 @@ export const Process = () => {
                     <div className="text medium_h4">
                         Подключаем и настраиваем серивисы
                     </div>
-                </div>
-                <div className="block">
+                </motion.div>
+                <motion.div className="block"
+                            variants={fadeIn("up", 0)}
+                            initial="hidden"
+                            whileInView={'show'}
+                            viewport={viewport}
+                >
                     <div className="top">
                         <div className={'number medium_h1'}>5</div>
                         <img src={image4} className={'image'} alt={image2}/>
 
                     </div>
                     <div className="text medium_h4">
-                    Тестируем, проверяем
+                        Тестируем, проверяем
                         несколькораз и запускаем
                     </div>
-                </div>
-                <div className="block">
+                </motion.div>
+                <motion.div variants={fadeIn("up", 0)}
+                            initial="hidden"
+                            whileInView={'show'}
+                            viewport={viewport}
+                            className="block"
+                >
                     <div className="top">
                         <div className={'number medium_h1'}>6</div>
                         <img src={image5} className={'image'} alt={image2}/>
@@ -77,8 +117,8 @@ export const Process = () => {
                         Поддерживаем и обновляем сайт
                         после разработки
                     </div>
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
         </div>
     )
 };
