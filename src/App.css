@@ -81,6 +81,8 @@
             position: relative;
             height: 50vh;
 
+            bottom: -50vh;
+
             border-top-right-radius: 32px;
             border-top-left-radius: 32px;
         }
