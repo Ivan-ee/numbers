@@ -111,10 +111,10 @@
 }
 
 @keyframes slide {
-    0%{
+    0% {
         background-position-x: 0%;
     }
-    100%{
+    100% {
         background-position-x: 600vw;
     }
 }
@@ -1055,6 +1055,19 @@
     .page-container {
         max-width: 766px;
         padding: 0 39px;
+    }
+
+    .main-container {
+        .mobile {
+
+            .block {
+                margin: 0 20px !important;
+            }
+
+            .green-block {
+                margin: 0 25px !important;
+            }
+        }
     }
 
     .services {
