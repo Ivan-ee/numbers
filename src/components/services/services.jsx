@@ -32,7 +32,7 @@ export const Services = () => {
             <Form show={isShowingModal} onCloseButtonClick={toggleModal} type={selectedType} color={selectedColor}
                   onSuccess={handleSuccess}/>
             <SuccessModal show={isSuccessModalVisible} onClose={handleCloseSuccessModal}/>
-            <div
+            <div id={'service'}
                 className="page-container services">
                 <div className="title medium_h1">
                     Услуги

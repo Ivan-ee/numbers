@@ -65,7 +65,7 @@ export const Case = () => {
     }, [selectedId]);
 
     return (
-        <div className="page-container case">
+        <div className="page-container case" id={'case'}>
             <div className="title medium_h1">
                 Кейсы
             </div>

@@ -43,7 +43,7 @@ export const Footer = () => {
         <>
             <SuccessModal show={isSuccessModalVisible} onClose={handleCloseSuccessModal}/>
 
-            <footer className="page-container footer">
+            <footer className="page-container footer" id={'contact'}>
                 <div className={'info'}>
                     <div className="title medium_h3">
                         Так, давайте обсудим<br/>

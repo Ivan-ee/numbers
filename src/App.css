@@ -1191,6 +1191,12 @@
     .main-container {
         max-width: 768px;
         margin: 0 auto;
+
+        .mobile{
+            .title{
+                font-size: 64px;
+            }
+        }
     }
 
     .header {

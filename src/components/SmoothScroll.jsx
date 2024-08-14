@@ -1,28 +1,22 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 const useSmoothScroll = (ref) => {
     useEffect(() => {
         const handleScroll = (e) => {
+            const href = e.currentTarget.getAttribute('data-id');
+            if (!href) return;
 
-            const href = e.currentTarget.getAttribute('href');
-
-            if (href.startsWith('http://') || href.startsWith('https://')) {
-                return;
-            }
-
-            e.preventDefault();
-            const targetId = e.currentTarget.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
+            const targetElement = document.querySelector(href);
 
             if (targetElement) {
+                e.preventDefault();
                 const yOffset = -100;
                 const yPosition = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
                 window.scrollTo({ top: yPosition, behavior: 'smooth' });
             }
-
         };
 
-        const buttons = ref.current.querySelectorAll('a');
+        const buttons = ref.current.querySelectorAll('[data-id]');
         buttons.forEach(button => button.addEventListener('click', handleScroll));
 
         return () => buttons.forEach(button => button.removeEventListener('click', handleScroll));
