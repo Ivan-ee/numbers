@@ -60,7 +60,7 @@ export const Services = () => {
                             <div className={'price medium_h2'}>
                                 от 70 000 ₽
                             </div>
-                            <div className={'button'} onClick={() => handleRentClick('lending', 'green')}>
+                            <div className={'button medium_h4'} onClick={() => handleRentClick('lending', 'green')}>
                                 <div>Выбрать</div>
                             </div>
                         </div>
