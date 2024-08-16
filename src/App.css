@@ -1082,6 +1082,10 @@
             box-sizing: border-box;
 
         }
+
+        .pc{
+            display: none;
+        }
     }
 
     .services {
@@ -1275,7 +1279,7 @@
                 max-width: 210px;
                 height: 330px;
 
-                bottom: 396px;
+                bottom: 163px; //bottom: 396px;
                 left: 60px;
 
                 background: linear-gradient(to right, #51C89E 0%, #52CC81 20%, #63D06B 40%, #74C857 60%, #80CB57 80%, #90D056 100%) !important;
@@ -1289,7 +1293,7 @@
                 height: 420px;
 
                 left: 360px;
-                bottom: 33px;
+                bottom: -257px;
 
                 background: linear-gradient(to right, #FF8451 0%, #FF7A59 20%, #FF745D 40%, #FF6C64 60%, #F86D72 80%, #ED6F87 100%) !important;
 
@@ -1302,7 +1306,7 @@
                 height: 330px;
 
                 left: 420px;
-                bottom: 174px;
+                bottom: 404px;
 
                 align-items: flex-end;
 
@@ -1785,7 +1789,7 @@
                 max-width: 250px;
                 height: 330px;
 
-                bottom: 396px;
+                bottom: 163px;
                 left: 70px;
             }
 
@@ -1796,7 +1800,7 @@
                 height: 420px;
 
                 left: 420px;
-                bottom: 33px;
+                bottom: -257px;
 
                 background: linear-gradient(to right, #FF8451 0%, #FF7A59 20%, #FF745D 40%, #FF6C64 60%, #F86D72 80%, #ED6F87 100%) !important;
 
@@ -1809,7 +1813,7 @@
                 height: 330px;
 
                 left: 490px;
-                bottom: 174px;
+                bottom: 404px;
 
                 align-items: flex-end;
 
@@ -1971,7 +1975,7 @@
                 max-width: 330px;
                 height: 330px;
 
-                bottom: 396px;
+                bottom: 163px;
                 left: 90px;
             }
 
@@ -1984,7 +1988,7 @@
                 height: 420px;
 
                 left: 540px;
-                bottom: 33px;
+                bottom: -257px;
 
                 background: linear-gradient(to right, #FF8451 0%, #FF7A59 20%, #FF745D 40%, #FF6C64 60%, #F86D72 80%, #ED6F87 100%) !important;
 
@@ -1997,7 +2001,7 @@
                 height: 330px;
 
                 left: 630px;
-                bottom: 174px;
+                bottom: 441px;
 
                 align-items: flex-end;
 
