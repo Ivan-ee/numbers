@@ -75,6 +75,28 @@ export const Main = () => {
                     </motion.div>
                 </div>
             </div>
+            <div className="pc">
+                <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    variants={textVariants}
+                    className="title"
+                >
+                    <div>Numbers</div>
+                </motion.div>
+                <motion.div
+                    className="block orange-block  medium_h3">
+                    <div className="text">Продвижение</div>
+                </motion.div>
+                <motion.div
+                    className="block red-block medium_h3">
+                    <div className="text">Разработка</div>
+                </motion.div>
+                <motion.div
+                    className="block green-block medium_h3">
+                    <div className="text">Дизайн</div>
+                </motion.div>
+            </div>
         </div>
     );
 };
