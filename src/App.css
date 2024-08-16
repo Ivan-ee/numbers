@@ -1758,13 +1758,73 @@
     .footer-container {
         padding-top: 70px;
     }
+
+    .main-container {
+
+
+        .pc {
+
+            .title{
+                left: 70px;
+                bottom: -200px;
+
+            }
+
+            .block {
+                border-radius: 32px;
+                padding: 32px;
+
+                .text{
+                    font-size: 24px !important;
+                }
+            }
+
+            .green-block {
+                position: relative;
+
+                max-width: 250px;
+                height: 330px;
+
+                bottom: 396px;
+                left: 70px;
+            }
+
+            .red-block {
+                position: relative;
+
+                max-width: 320px;
+                height: 420px;
+
+                left: 420px;
+                bottom: 33px;
+
+                background: linear-gradient(to right, #FF8451 0%, #FF7A59 20%, #FF745D 40%, #FF6C64 60%, #F86D72 80%, #ED6F87 100%) !important;
+
+            }
+
+            .orange-block {
+                position: relative;
+
+                max-width: 250px;
+                height: 330px;
+
+                left: 490px;
+                bottom: 174px;
+
+                align-items: flex-end;
+
+                background: linear-gradient(to right, #FFD80D 1%, #EC940F 100%) !important;
+
+            }
+
+        }
+    }
 }
 
 
 @media (min-width: 1199px) {
     .page-container {
         max-width: 1200px;
-        padding: 0 115px;
     }
 
     .services {
@@ -1881,5 +1941,70 @@
         }
 
 
+    }
+
+    .main-container {
+
+
+        .pc {
+
+            .title{
+                left: 90px;
+                bottom: -200px;
+
+                font-size: 96px;
+
+            }
+
+            .block {
+                border-radius: 32px;
+                padding: 32px;
+
+                .text{
+                    font-size: 36px !important;
+                }
+            }
+
+            .green-block {
+                position: relative;
+
+                max-width: 330px;
+                height: 330px;
+
+                bottom: 396px;
+                left: 90px;
+            }
+
+            .red-block {
+                position: relative;
+
+                padding: 48px!important;
+
+                max-width: 420px;
+                height: 420px;
+
+                left: 540px;
+                bottom: 33px;
+
+                background: linear-gradient(to right, #FF8451 0%, #FF7A59 20%, #FF745D 40%, #FF6C64 60%, #F86D72 80%, #ED6F87 100%) !important;
+
+            }
+
+            .orange-block {
+                position: relative;
+
+                max-width: 330px;
+                height: 330px;
+
+                left: 630px;
+                bottom: 174px;
+
+                align-items: flex-end;
+
+                background: linear-gradient(to right, #FFD80D 1%, #EC940F 100%) !important;
+
+            }
+
+        }
     }
 }
