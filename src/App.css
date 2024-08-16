@@ -1,10 +1,9 @@
 #root {
     text-align: center;
-
+    background-color: var(--color-gray-1);
 }
 
 .page-container {
-    background-color: var(--color-gray-1);
 
     box-sizing: border-box;
 
@@ -22,6 +21,8 @@
     padding-bottom: 50px;
 
     background-color: var(--color-gray-1);
+    margin-bottom: 50px;
+
 
     .mobile {
         background-color: var(--color-white);
@@ -36,7 +37,6 @@
         flex-direction: column;
         justify-content: space-between;
 
-        margin: 0 30px 50px;
 
         .title {
             flex: 1;
@@ -131,6 +131,7 @@
 
     .header-pc {
         display: none;
+
     }
 
     .anim {
@@ -287,12 +288,15 @@
 
                     color: var(--color-gray-4);
 
-                    width: max-content;
 
-                    padding: 16px 28px;
+                    padding: 16px 0;
+
+                    width: 100%;
+
 
                     display: flex;
                     align-items: center;
+                    justify-content: center;
 
                     transition: all .3s;
                 }
@@ -531,7 +535,7 @@
             border-top-right-radius: 16px;
             border-top-left-radius: 16px;
 
-            height: 80px;
+            height: 20px;
         }
 
         .green {
@@ -801,15 +805,17 @@
     }
 }
 
-.footer {
-    margin-top: 50px;
+.footer-container{
+    padding-top: 20px;
+    background-color: var(--color-white);
+}
 
-    background-color: white;
+.footer {
+
     display: flex;
     flex-direction: column;
 
     margin-bottom: 50px;
-
 
     gap: 24px;
 
@@ -1064,21 +1070,21 @@
 }
 
 @media (min-width: 359px) {
-    .header{
-        .header-mobile{
-            display: none!important;
+    .header {
+        .header-mobile {
+            display: none !important;
         }
     }
 
-    .main-container{
+    .main-container {
 
-        .mobile{
+        .mobile {
             box-sizing: border-box;
 
         }
     }
 
-    .services{
+    .services {
         padding-top: 30px;
 
     }
@@ -1090,7 +1096,7 @@
         padding: 0 39px;
     }
 
-    .services{
+    .services {
         padding-top: 30px;
 
     }
@@ -1139,6 +1145,10 @@
 
     .modal {
         padding: 2rem 39px;
+    }
+
+    .footer-container{
+        padding-top: 30px;
     }
 
     .footer {
@@ -1212,22 +1222,19 @@
     }
 
     .main-container {
-        max-width: 768px;
-        margin: 0 auto;
-
         max-height: calc(100vh - 69px);
 
-
-        .mobile{
+        .mobile {
+            box-shadow: 0px 8px 72px rgba(0, 0, 0, 0.04);
             max-height: calc(100vh - 69px);
 
-            .title{
+            .title {
                 font-size: 64px;
             }
         }
     }
 
-    .services{
+    .services {
         padding-top: 0;
 
     }
@@ -1296,6 +1303,11 @@
                 .body {
                     .text {
                         margin-right: 0;
+                    }
+
+                    .button {
+                        padding: 16px 28px;
+                        width: max-content;
                     }
                 }
             }
@@ -1377,12 +1389,12 @@
 
             .slider-container {
                 .slick-prev {
-                    top: -45px !important;
+                    top: 316px !important;
                     left: 540px !important;
                 }
 
                 .slick-next {
-                    top: -45px !important;
+                    top: 316px !important;
                     left: 625px !important;
                 }
             }
@@ -1423,6 +1435,10 @@
                 }
             }
         }
+    }
+
+    .footer-container{
+        padding-top: 50px;
     }
 
     .footer {
@@ -1542,10 +1558,6 @@
         padding: 0 75px;
     }
 
-    .main-container {
-        max-width: 960px;
-    }
-
     .whyme {
         .content {
             gap: 36px;
@@ -1663,6 +1675,10 @@
         }
 
     }
+
+    .footer-container{
+        padding-top: 70px;
+    }
 }
 
 
@@ -1670,10 +1686,6 @@
     .page-container {
         max-width: 1200px;
         padding: 0 115px;
-    }
-
-    .main-container {
-        max-width: 1200px;
     }
 
     .services {
@@ -1731,11 +1743,11 @@
 
             .slider-container {
                 .slick-prev {
-                    left: 835px !important;
+                    left: 829px !important;
                 }
 
                 .slick-next {
-                    left: 910px !important;
+                    left: 904px !important;
                 }
             }
         }

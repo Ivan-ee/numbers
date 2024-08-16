@@ -33,15 +33,17 @@ export const Header = () => {
     useSmoothScroll(headerRef);
 
     return (
-        <div className="page-container header" ref={headerRef}>
-            <div className={'header-pc'}>
-                <div data-id={'#main'} className={'logo medium_h5'}>Numbers</div>
-                <div className={'buttons medium_h5'}>
-                    <div data-id={'#service'} className={'button'}>Услуги</div>
-                    <div data-id={'#case'} className={'button'}>Кейсы</div>
-                    <div data-id={'#qa'} className={'button'}>Вопросы</div>
+        <div className="header" ref={headerRef}>
+            <div className="page-container">
+                <div className={'header-pc'}>
+                    <div data-id={'#main'} className={'logo medium_h5'}>Numbers</div>
+                    <div className={'buttons medium_h5'}>
+                        <div data-id={'#service'} className={'button'}>Услуги</div>
+                        <div data-id={'#case'} className={'button'}>Кейсы</div>
+                        <div data-id={'#qa'} className={'button'}>Вопросы</div>
+                    </div>
+                    <div data-id={'#contact'} className={'special-btn medium_h5'}>Контакты</div>
                 </div>
-                <div data-id={'#contact'} className={'special-btn medium_h5'}>Контакты</div>
             </div>
             <div className={`header-mobile ${isOpen ? 'active' : ''}`}>
                 <div className={'main'}>
@@ -51,7 +53,7 @@ export const Header = () => {
                     </div>
                 </div>
                 <div className={`buttons medium_h5 ${isOpen ? 'active' : ''}`}>
-                    <div
+                <div
                         data-id={'#service'}
                         className={'button'}
                         onClick={() => setIsOpen(!isOpen)}>

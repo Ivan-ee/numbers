@@ -58,10 +58,10 @@ export const Form = ({show, onCloseButtonClick, type, color, onSuccess}) => {
                 <div className="body">
                     <div className="top">
                         <div>
-                            <div className="title regular_h3">
+                            <div className="title medium_h3">
                                 {data[type]}
                             </div>
-                            <div className="desc regular_h5">
+                            <div className="desc medium_h5">
                                 Заполните данные
                             </div>
                         </div>

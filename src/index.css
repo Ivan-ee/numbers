@@ -346,6 +346,7 @@ template {
   display: none;
 }
 
+
 /*---------------------------------------------*/
 
 :root {
@@ -360,6 +361,7 @@ template {
 }
 
 body {
+  font-variant-ligatures: none;
   font-family: "TT Norms", Verdana, Geneva, Tahoma, sans-serif;
 }
 

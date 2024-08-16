@@ -14,7 +14,7 @@ export const Main = () => {
     };
 
     return (
-        <div className="main-container" id={'main'}>
+        <div className="page-container main-container" id={'main'}>
             <div className="mobile">
                 <motion.div
                     initial="hidden"
