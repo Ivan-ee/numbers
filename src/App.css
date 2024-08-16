@@ -49,9 +49,29 @@
             justify-content: center;
 
             div {
-                background: repeating-linear-gradient(to right, #51C89E 0%, #52CC81 7.14%, #63D06B 14.28%, #74C857 21.4%,
-                #80CB57 28.56%, #90D056 35.7%, #FF8451 42.84%, #FF7A59 50%, #FF745D 58%, #FF6C64 67%, #F86D72 76%, #ED6F87 85%,
-                #FFD80D 94%, #EC940F 100%);
+                background: linear-gradient(
+                        to right,
+                        #51C89E 0%,
+                        #52CC81 4%,       /* Плавный переход от зеленого к следующему оттенку */
+                        #63D06B 8%,
+                        #7BDB7D 12%,
+                        #80CB57 16%,      /* Основной зеленый */
+                        #A1CC63 20%,      /* Переходный цвет между зеленым и желтым */
+                        #C1D36F 24%,
+                        #E0DA7A 28%,
+                        #FFD80D 32%,      /* Основной желтый */
+                        #FFC357 36%,      /* Переходный цвет между желтым и оранжевым */
+                        #FFAC92 40%,
+                        #FF8451 44%,      /* Основной оранжевый */
+                        #F47764 48%,      /* Плавный переход от оранжевого к красному */
+                        #ED6F87 52%,
+                        #E15D8A 56%,
+                        #F86D72 60%,      /* Основной красный */
+                        #ED6F87 64%,      /* Переходный цвет между красным и зеленым */
+                        #7D4E6B 68%,
+                        #51C89E 76%       /* Возвращение к основному зеленому */
+                );
+
 
                 /*background: linear-gradient(to right, #51C89E 0%, #52CC81 20%, #63D06B 40%, #74C857 60%, #80CB57 80%, #90D056 100%),*/
                 /*linear-gradient(to right, #FF8451 0%, #FF7A59 20%, #FF745D 40%, #FF6C64 60%, #F86D72 80%, #ED6F87 100%),*/
@@ -60,7 +80,7 @@
                 background-size: 600vw 600vw;
                 -webkit-text-fill-color: transparent;
                 -webkit-background-clip: text;
-                animation: slide 10s linear infinite forwards;
+                animation: slide 15s ease-in-out infinite;
             }
 
 
@@ -112,10 +132,13 @@
 
 @keyframes slide {
     0% {
-        background-position-x: 0%;
+        background-position: 80% 0%;
+    }
+    50% {
+        background-position: 20% 100%;
     }
     100% {
-        background-position-x: 600vw;
+        background-position: 80% 0%;
     }
 }
 
@@ -1257,6 +1280,33 @@
                 left: 60px;
                 bottom: -200px;
 
+                background: linear-gradient(
+                        to right,
+                        #51C89E 0%,
+                        #52CC81 4%,       /* Плавный переход от зеленого к следующему оттенку */
+                        #63D06B 8%,
+                        #7BDB7D 12%,
+                        #80CB57 16%,      /* Основной зеленый */
+                        #A1CC63 20%,      /* Переходный цвет между зеленым и желтым */
+                        #C1D36F 24%,
+                        #E0DA7A 28%,
+                        #FFD80D 32%,      /* Основной желтый */
+                        #FFC357 36%,      /* Переходный цвет между желтым и оранжевым */
+                        #FFAC92 40%,
+                        #FF8451 44%,      /* Основной оранжевый */
+                        #F47764 48%,      /* Плавный переход от оранжевого к красному */
+                        #ED6F87 52%,
+                        #E15D8A 56%,
+                        #F86D72 60%,      /* Основной красный */
+                        #ED6F87 64%,      /* Переходный цвет между красным и зеленым */
+                        #7D4E6B 68%,
+                        #51C89E 76%       /* Возвращение к основному зеленому */
+                );
+
+                background-size: 600vw 600vw;
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                animation: slide 15s ease-in-out infinite;
 
             }
 
@@ -1282,7 +1332,7 @@
                 bottom: 163px; //bottom: 396px;
                 left: 60px;
 
-                background: linear-gradient(to right, #51C89E 0%, #52CC81 20%, #63D06B 40%, #74C857 60%, #80CB57 80%, #90D056 100%) !important;
+                background: linear-gradient(to right, #51C89E 0%, #52CC81 20%, #63D06B 40%, #63D06B 60%, #80CB57 80%, #90D056 100%) !important;
 
             }
 
