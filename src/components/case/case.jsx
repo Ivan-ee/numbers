@@ -102,9 +102,9 @@ export const Case = () => {
                             exit={{ opacity: 0, scale: 0.1 }}
                             transition={{
                                 duration: 0.6,
-                                ease: [0.42, 0.2, 0.7, 0.9],
-                                damping: 0, // Уменьшить значение, чтобы анимация была более плавной и менее "жесткой"
-                                stiffness: 0, // Снизить жесткость для более мягкой анимации
+                                ease: "easeInOut",
+                                damping: 0,
+                                stiffness: 0,
                             }}
                         >
                             <motion.div
