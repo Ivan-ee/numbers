@@ -151,6 +151,7 @@
     background-color: var(--color-white);
 
     border-bottom: 2px solid var(--color-gray-2);
+    backdrop-filter: blur(20px);
 
     .header-pc {
         display: none;
@@ -1095,7 +1096,7 @@
 }
 
 @media (min-width: 359px) {
-    .header {display: none ;
+    .header {
         .header-mobile {
             display: none !important;
         }
@@ -1375,7 +1376,6 @@
     }
 
     .header {
-        display: block;
         .header-mobile {
             display: none;
         }
