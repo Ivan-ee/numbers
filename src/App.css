@@ -1095,7 +1095,7 @@
 }
 
 @media (min-width: 359px) {
-    .header {
+    .header {display: none ;
         .header-mobile {
             display: none !important;
         }
@@ -1375,6 +1375,7 @@
     }
 
     .header {
+        display: block;
         .header-mobile {
             display: none;
         }
