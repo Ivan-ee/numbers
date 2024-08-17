@@ -1946,6 +1946,16 @@
         }
     }
 
+    .process{
+        .content{
+            .block{
+                .text{
+                    font-size: 24px!important;
+                }
+            }
+        }
+    }
+
     .modal {
         padding: 4rem 115px;
 

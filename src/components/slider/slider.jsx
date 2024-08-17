@@ -103,12 +103,13 @@ export const QA = () => {
         speed: 300,
         slidesToShow: 4,
         slidesToScroll: 1,
+        drag: false,
+        draggable: false,
         nextArrow: <SampleNextArrow/>,
         prevArrow: <SamplePrevArrow/>,
         infinite: false,
         responsive: [
             {
-                infinite: false,
                 breakpoint: 1200,
                 settings: {
                     slidesToShow: 3,
@@ -116,7 +117,6 @@ export const QA = () => {
                 }
             },
             {
-                infinite: false,
                 breakpoint: 980,
                 settings: {
                     slidesToShow: 2,
@@ -124,8 +124,9 @@ export const QA = () => {
                 }
             },
             {
-                infinite: false,
                 breakpoint: 768,
+                drag: true,
+                draggable: true,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
