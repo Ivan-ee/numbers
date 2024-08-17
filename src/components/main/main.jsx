@@ -30,13 +30,11 @@ export const Main = () => {
                         transition={{
                             delay: 0.2,
                             duration: 0.8,
-                            ease: [0, 0.8, 0.5, 1],
-                            scale: {
-                                type: "spring",
-                                damping: 100,
-                                stiffness: 100,
-                                restDelta: 0.001
-                            }
+                            ease: [0.42, 0, 0.58, 1], // Более плавная кривая Безье (эквивалент "easeInOut")
+                            type: "spring", // Включение пружинной анимации
+                            damping: 20, // Уменьшить значение, чтобы анимация была более плавной и менее "жесткой"
+                            stiffness: 70, // Снизить жесткость для более мягкой анимации
+                            restDelta: 0.001
                         }}
                         className="block green-block medium_h3">
                         <div className="text">Дизайн</div>
@@ -45,13 +43,11 @@ export const Main = () => {
                             transition={{
                                 delay: 0.8,
                                 duration: 0.8,
-                                ease: [0, 0.8, 0.5, 1],
-                                scale: {
-                                    type: "spring",
-                                    damping: 100,
-                                    stiffness: 100,
-                                    restDelta: 0.001
-                                }
+                                ease: [0.42, 0, 0.58, 1], // Более плавная кривая Безье (эквивалент "easeInOut")
+                                type: "spring", // Включение пружинной анимации
+                                damping: 20, // Уменьшить значение, чтобы анимация была более плавной и менее "жесткой"
+                                stiffness: 70, // Снизить жесткость для более мягкой анимации
+                                restDelta: 0.001
                             }}
                             className="block red-block medium_h3">
                             <div className="text">Разработка</div>
@@ -60,13 +56,11 @@ export const Main = () => {
                                 transition={{
                                     delay: 1.5,
                                     duration: 0.8,
-                                    ease: [0, 0.8, 0.5, 1],
-                                    scale: {
-                                        type: "spring",
-                                        damping: 100,
-                                        stiffness: 100,
-                                        restDelta: 0.001
-                                    }
+                                    ease: [0.42, 0, 0.58, 1], // Более плавная кривая Безье (эквивалент "easeInOut")
+                                    type: "spring", // Включение пружинной анимации
+                                    damping: 20, // Уменьшить значение, чтобы анимация была более плавной и менее "жесткой"
+                                    stiffness: 70, // Снизить жесткость для более мягкой анимации
+                                    restDelta: 0.001
                                 }}
                                 className="block orange-block medium_h3">
                                 <div className="text">Продвижение</div>
@@ -90,13 +84,11 @@ export const Main = () => {
                     transition={{
                         delay: 1.5,
                         duration: 0.8,
-                        ease: [0, 0.8, 0.5, 1],
-                        scale: {
-                            type: "spring",
-                            damping: 100,
-                            stiffness: 100,
-                            restDelta: 0.001
-                        }
+                        ease: [0.42, 0, 0.58, 1], // Более плавная кривая Безье (эквивалент "easeInOut")
+                        type: "spring", // Включение пружинной анимации
+                        damping: 20, // Уменьшить значение, чтобы анимация была более плавной и менее "жесткой"
+                        stiffness: 70, // Снизить жесткость для более мягкой анимации
+                        restDelta: 0.001
                     }}
                     className="block orange-block  medium_h3">
                     <div className="text">Продвижение</div>
@@ -106,13 +98,11 @@ export const Main = () => {
                     transition={{
                         delay: 0.8,
                         duration: 0.8,
-                        ease: [0, 0.8, 0.5, 1],
-                        scale: {
-                            type: "spring",
-                            damping: 100,
-                            stiffness: 100,
-                            restDelta: 0.001
-                        }
+                        ease: [0.42, 0, 0.58, 1], // Более плавная кривая Безье (эквивалент "easeInOut")
+                        type: "spring", // Включение пружинной анимации
+                        damping: 20, // Уменьшить значение, чтобы анимация была более плавной и менее "жесткой"
+                        stiffness: 70, // Снизить жесткость для более мягкой анимации
+                        restDelta: 0.001
                     }}
                     className="block red-block medium_h3">
                     <div className="text">Разработка</div>
@@ -122,13 +112,11 @@ export const Main = () => {
                     transition={{
                         delay: 0.2,
                         duration: 0.8,
-                        ease: [0, 0.8, 0.5, 1],
-                        scale: {
-                            type: "spring",
-                            damping: 100,
-                            stiffness: 100,
-                            restDelta: 0.001
-                        }
+                        ease: [0.42, 0, 0.58, 1], // Более плавная кривая Безье (эквивалент "easeInOut")
+                        type: "spring", // Включение пружинной анимации
+                        damping: 20, // Уменьшить значение, чтобы анимация была более плавной и менее "жесткой"
+                        stiffness: 70, // Снизить жесткость для более мягкой анимации
+                        restDelta: 0.001
                     }}
                     className="block green-block medium_h3">
                     <div className="text">Дизайн</div>

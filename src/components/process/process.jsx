@@ -98,7 +98,7 @@ export const Process = () => {
                     </div>
                     <div className="text medium_h4">
                         Тестируем, проверяем
-                        несколькораз и запускаем
+                        несколько раз и запускаем
                     </div>
                 </motion.div>
                 <motion.div variants={fadeIn("up", 0)}
