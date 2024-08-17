@@ -7,7 +7,7 @@ export const Main = () => {
         visible: {
             opacity: 1,
             transition: {
-                delay: 3.2,
+                delay: 2.4,
                 duration: 0.8,
             }
         }
@@ -29,8 +29,8 @@ export const Main = () => {
                         animate={{y: '-50vh'}}
                         transition={{
                             delay: 0.2,
-                            duration: 1,
-                            ease: [0, 0.4, 0.5, 1],
+                            duration: 0.8,
+                            ease: [0, 0.8, 0.5, 1],
                             scale: {
                                 type: "spring",
                                 damping: 100,
@@ -43,9 +43,9 @@ export const Main = () => {
                         <motion.div
                             animate={{y: '-50vh'}}
                             transition={{
-                                delay: 1.2,
-                                duration: 1,
-                                ease: [0, 0.5, 0.2, 1],
+                                delay: 0.8,
+                                duration: 0.8,
+                                ease: [0, 0.8, 0.5, 1],
                                 scale: {
                                     type: "spring",
                                     damping: 100,
@@ -58,9 +58,9 @@ export const Main = () => {
                             <motion.div
                                 animate={{y: '-50vh'}}
                                 transition={{
-                                    delay: 2.2,
-                                    duration: 1,
-                                    ease: [0, 0.5, 0.2, 1],
+                                    delay: 1.5,
+                                    duration: 0.8,
+                                    ease: [0, 0.8, 0.5, 1],
                                     scale: {
                                         type: "spring",
                                         damping: 100,
@@ -88,9 +88,9 @@ export const Main = () => {
                 <motion.div
                     animate={{y: 230}}
                     transition={{
-                        delay: 2.2,
-                        duration: 1,
-                        ease: [0, 0.5, 0.2, 1],
+                        delay: 1.5,
+                        duration: 0.8,
+                        ease: [0, 0.8, 0.5, 1],
                         scale: {
                             type: "spring",
                             damping: 100,
@@ -104,9 +104,9 @@ export const Main = () => {
                 <motion.div
                     animate={{y: -290}}
                     transition={{
-                        delay: 1.2,
-                        duration: 1,
-                        ease: [0, 0.5, 0.2, 1],
+                        delay: 0.8,
+                        duration: 0.8,
+                        ease: [0, 0.8, 0.5, 1],
                         scale: {
                             type: "spring",
                             damping: 100,
@@ -121,8 +121,8 @@ export const Main = () => {
                     animate={{y: -233}}
                     transition={{
                         delay: 0.2,
-                        duration: 1,
-                        ease: [0, 0.5, 0.2, 1],
+                        duration: 0.8,
+                        ease: [0, 0.8, 0.5, 1],
                         scale: {
                             type: "spring",
                             damping: 100,
