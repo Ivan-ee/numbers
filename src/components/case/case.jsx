@@ -97,12 +97,15 @@ export const Case = () => {
                             layoutId={String(selectedId)}
                             className="modal"
                             ref={modalRef}
-                            initial={{ opacity: 0, scale: 0.8 }}
+                            initial={{ opacity: 0, scale: 0.3 }}
                             animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale: 0.8 }}
+                            exit={{ opacity: 0, scale: 0.1 }}
                             transition={{
                                 duration: 0.5,
-                                ease: [0.4, 0, 0.2, 1]
+                                ease: [0.4, 0, 0.2, 1],
+                                damping: 1, // Уменьшить значение, чтобы анимация была более плавной и менее "жесткой"
+                                stiffness: 1, // Снизить жесткость для более мягкой анимации
+                                restDelta: 0.001
                             }}
                         >
                             <motion.div
