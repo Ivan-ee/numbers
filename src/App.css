@@ -1936,11 +1936,11 @@
 
             .slider-container {
                 .slick-prev {
-                    left: 829px !important;
+                    left: 65vw !important;
                 }
 
                 .slick-next {
-                    left: 904px !important;
+                    left: 70vw !important;
                 }
             }
         }

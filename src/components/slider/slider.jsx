@@ -101,7 +101,7 @@ export const QA = () => {
 
     const settings = {
         speed: 300,
-        slidesToShow: 2,
+        slidesToShow: 4,
         slidesToScroll: 1,
         nextArrow: <SampleNextArrow/>,
         prevArrow: <SamplePrevArrow/>,
@@ -110,6 +110,14 @@ export const QA = () => {
             {
                 infinite: false,
                 breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                infinite: false,
+                breakpoint: 980,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
@@ -128,8 +136,8 @@ export const QA = () => {
 
     return (
         <>
-            <div className="page-container qa" id={'qa'}>
-                <div className="title medium_h1">
+            <div className="qa" id={'qa'}>
+                <div className="page-container title medium_h1">
                     Вопросы
                 </div>
                 <div className="content">
