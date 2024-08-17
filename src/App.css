@@ -412,7 +412,8 @@
 
     padding: 2rem 30px;
 
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.48);
+    backdrop-filter: blur(20px);
 
     z-index: 9999;
     opacity: 1;
@@ -592,7 +593,8 @@
 
     padding: 2rem 30px;
 
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.48);
+    backdrop-filter: blur(20px);
 
     z-index: 9999;
     opacity: 1;
