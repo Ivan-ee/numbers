@@ -4,7 +4,7 @@ import {AnimatePresence, motion} from 'framer-motion';
 import image1 from '../../assets/images/case/paylay.png';
 import image2 from '../../assets/images/case/getboxx.png';
 import image3 from '../../assets/images/case/construct.png';
-import image4 from '../../assets/images/case/site.png';
+import image4 from '../../assets/images/case/clestore.png';
 
 export const Case = () => {
     const [selectedId, setSelectedId] = useState(null);
@@ -29,14 +29,14 @@ export const Case = () => {
             id: 3,
             image: image3,
             title: "Construct",
-            description: "Сайт строительной компании",
+            description: "Строительный магазин",
             url: null // Нет ссылки
         },
         {
             id: 4,
             image: image4,
-            title: "Site",
-            description: "Интернет-магазин",
+            title: "Clestore",
+            description: "Интернет-магазин молодежной одежды",
             url: null // Нет ссылки
         }
     ];
