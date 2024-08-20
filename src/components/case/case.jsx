@@ -95,7 +95,7 @@ export const Case = () => {
                                 layoutId={String(item.id)}
                                 onClick={() => handleItemClick(item.id, item.url)}
                             >
-                                <motion.div>Выбрать</motion.div>
+                                <motion.div>Смотреть</motion.div>
                             </motion.div>
                         </motion.div>
                     </motion.div>
