@@ -30,14 +30,14 @@ export const Case = () => {
             image: image3,
             title: "Construct",
             description: "Сайт строительной компании",
-            url: "https://getboxx.ru/"
+            url: null // Нет ссылки
         },
         {
             id: 4,
             image: image4,
             title: "Site",
             description: "Интернет-магазин",
-            url: "https://getboxx.ru/"
+            url: null // Нет ссылки
         }
     ];
 
@@ -64,6 +64,15 @@ export const Case = () => {
         };
     }, [selectedId]);
 
+    const handleItemClick = (id, url) => {
+        if (url) {
+            setSelectedId(id);
+        } else {
+            // Можно добавить действие для кейсов без ссылки, если нужно
+            console.log("Нет ссылки для открытия модального окна.");
+        }
+    };
+
     return (
         <div className="page-container case" id={'case'}>
             <div className="title medium_h1">
@@ -84,7 +93,7 @@ export const Case = () => {
                                 key={item.id}
                                 className={'button medium_h4'}
                                 layoutId={String(item.id)}
-                                onClick={() => setSelectedId(item.id)}
+                                onClick={() => handleItemClick(item.id, item.url)}
                             >
                                 <motion.div>Выбрать</motion.div>
                             </motion.div>
@@ -116,7 +125,7 @@ export const Case = () => {
 
                             <motion.iframe
                                 src={items.find(item => item.id === selectedId)?.url}
-                                className={'iframe '}
+                                className={'iframe'}
                             />
                         </motion.div>
                     )}
