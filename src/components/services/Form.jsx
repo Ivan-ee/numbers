@@ -61,7 +61,7 @@ export const Form = ({show, onCloseButtonClick, type, color, onSuccess}) => {
                 //     body: JSON.stringify(requestData),
                 // });
 
-                const response = await fetch('http://45.89.189.162:3000/tgbot/add', {
+                const response = await fetch('https://numbers-agency.ru/tgbot/add', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
