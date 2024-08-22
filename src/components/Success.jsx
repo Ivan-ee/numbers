@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import {motion, AnimatePresence} from 'framer-motion';
 
@@ -11,6 +11,19 @@ export const SuccessModal = ({show, onClose, initial}) => {
     const handleModalClick = (e) => {
         e.stopPropagation();
     };
+
+    useEffect(() => {
+        if (show) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+
+        // Очистка стиля при размонтировании компонента
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [show]);
 
     return ReactDOM.createPortal(
         <AnimatePresence>

@@ -100,7 +100,7 @@ export const QA = () => {
     }
 
     const settings = {
-        speed: 300,
+        speed: 700,
         slidesToShow: 4,
         slidesToScroll: 1,
         drag: false,

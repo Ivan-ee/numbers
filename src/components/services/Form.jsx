@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import ReactDOM from 'react-dom';
 import ReactLoading from "react-loading";
 import {motion, AnimatePresence} from 'framer-motion';
@@ -24,6 +24,19 @@ export const Form = ({show, onCloseButtonClick, type, color, onSuccess}) => {
         multisite: "Мультисайт",
         ecommerce: "Интернет-магазин"
     };
+
+    useEffect(() => {
+        if (show) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+
+        // Очистка стиля при размонтировании компонента
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [show]);
 
     const handleOverlayClick = (e) => {
         e.stopPropagation();
