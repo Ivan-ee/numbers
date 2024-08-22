@@ -179,7 +179,7 @@ export const Form = ({show, onCloseButtonClick, type, color, onSuccess}) => {
                                     на <span>обработку персональных данных</span>
                                 </div>
                                 <div className="button medium_h4" onClick={handleSubmit}>
-                                    <div> {!isLoading ?
+                                    <div> {isLoading ?
                                         <ReactLoading type={'bars'} color="#fff" height={20}
                                                       width={20}/> : 'Отправить'}</div>
                                 </div>
