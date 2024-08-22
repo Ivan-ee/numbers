@@ -1,6 +1,7 @@
 import telegram from '../../assets/images/footer/telegram.png'
 import React, {useState} from "react";
 import {SuccessModal} from "../Success.jsx";
+import InputMask from "react-input-mask";
 
 
 export const Footer = () => {
@@ -68,14 +69,14 @@ export const Footer = () => {
                                 onChange={(e) => setName(e.target.value)}
                                 onFocus={() => handleFocus('name')}
                             />
-                            <input
+                            <InputMask
                                 type="tel"
-                                className={`input ${errors.phone ? 'error' : ''}`}
-                                placeholder="Телефон"
                                 value={phone}
+                                placeholder="Телефон"
+                                mask="+7 (999) 999-99-99"
+                                className={`input ${errors.phone ? 'error' : ''}`}
                                 onChange={(e) => setPhone(e.target.value)}
-                                onFocus={() => handleFocus('phone')}
-                            />
+                                onFocus={() => handleFocus('phone')}/>
                             <input className={'input'} placeholder={'Компания'}/>
                             <input className={'input'} placeholder={'Почта'}/>
                         </div>
