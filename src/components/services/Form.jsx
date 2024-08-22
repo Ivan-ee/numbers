@@ -56,7 +56,7 @@ export const Form = ({show, onCloseButtonClick, type, color, onSuccess}) => {
             };
 
             try {
-                const response = await fetch('http://localhost:3000/tgbot/add', {
+                const response = await fetch('/tgbot/add', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
