@@ -1,9 +1,12 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
+import ReactLoading from "react-loading";
 
 import close from '../../assets/images/close2.png';
 
 export const Form = ({show, onCloseButtonClick, type, color, onSuccess}) => {
+    const [isLoading, setIsLoading] = useState(false);
+
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [company, setCompany] = useState('');
@@ -41,6 +44,8 @@ export const Form = ({show, onCloseButtonClick, type, color, onSuccess}) => {
         setErrors(newErrors);
 
         if (!newErrors.name && !newErrors.phone) {
+            setIsLoading(true);
+
             const requestData = {
                 title: type,
                 data: {
@@ -61,7 +66,7 @@ export const Form = ({show, onCloseButtonClick, type, color, onSuccess}) => {
                 //     body: JSON.stringify(requestData),
                 // });
 
-                const response = await fetch('/tgbot/add', {
+                const response = await fetch('http://localhost:3000/tgbot/add', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -80,6 +85,7 @@ export const Form = ({show, onCloseButtonClick, type, color, onSuccess}) => {
                 console.error('Error:', error);
             }
 
+            setIsLoading(false);
             onCloseButtonClick();
         }
     };
@@ -158,7 +164,8 @@ export const Form = ({show, onCloseButtonClick, type, color, onSuccess}) => {
                             на <span>обработку персональных данных</span>
                         </div>
                         <div className="button medium_h4" onClick={handleSubmit}>
-                            <div>Отправить</div>
+                            <div> {isLoading ?
+                                <ReactLoading type={'spinningBubbles'} color="#fff" height={18} width={24}/> : 'Отправить'}</div>
                         </div>
                     </div>
                 </div>
