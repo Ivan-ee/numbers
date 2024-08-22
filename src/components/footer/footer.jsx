@@ -141,8 +141,8 @@ export const Footer = () => {
                             </div>
                             <div className={'button medium_h4'} onClick={handleSubmit}>
                                 <div> {isLoading ?
-                                    <ReactLoading type={'spinningBubbles'} color="#fff" height={18}
-                                                  width={24}/> : 'Отправить'}</div>
+                                    <ReactLoading type={'bars'} color="#fff" height={20}
+                                                  width={20}/> : 'Отправить'}</div>
                             </div>
                         </div>
                     </div>
