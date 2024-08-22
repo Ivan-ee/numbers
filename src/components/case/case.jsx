@@ -106,15 +106,10 @@ export const Case = () => {
                             layoutId={String(selectedId)}
                             className="modal"
                             ref={modalRef}
-                            initial={{ opacity: 0, scale: 0.3 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale: 0.1 }}
-                            transition={{
-                                duration: 0.6,
-                                ease: "easeInOut",
-                                damping: 0,
-                                stiffness: 0,
-                            }}
+                            initial={{ opacity: 0,scale: 1 }}
+                            animate={{ opacity: 1,scale: 1 }}
+                            exit={{ opacity: 0,scale: 1 }}
+                            transition={{ duration: 0.4, ease: "easeInOut" }}
                         >
                             <motion.div
                                 onClick={() => setSelectedId(null)}
@@ -124,6 +119,15 @@ export const Case = () => {
                             </motion.div>
 
                             <motion.iframe
+                                initial={{ opacity: 0, scale: 0.3 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.1 }}
+                                transition={{
+                                    duration: 0.6,
+                                    ease: "easeInOut",
+                                    damping: 50,
+                                    stiffness: 100,
+                                }}
                                 src={items.find(item => item.id === selectedId)?.url}
                                 className={'iframe'}
                             />
