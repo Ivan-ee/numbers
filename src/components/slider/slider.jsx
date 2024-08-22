@@ -56,7 +56,7 @@ export const QA = () => {
     function SampleNextArrow(props) {
         const {className, style, onClick} = props;
         return (
-            <div
+            <section
                 className={className}
                 style={{
                     ...style,

@@ -5,7 +5,6 @@ import {SuccessModal} from "../Success.jsx";
 import {Form} from "./Form.jsx";
 import {useModal} from "./useModal.jsx";
 import {useState} from "react";
-import {motion} from "framer-motion";
 
 export const Services = () => {
     const [isShowingModal, toggleModal] = useModal();
@@ -32,7 +31,7 @@ export const Services = () => {
             <Form show={isShowingModal} onCloseButtonClick={toggleModal} type={selectedType} color={selectedColor}
                   onSuccess={handleSuccess}/>
             <SuccessModal show={isSuccessModalVisible} onClose={handleCloseSuccessModal}/>
-            <div id={'service'}
+            <section id={'service'}
                 className="page-container services">
                 <div className="title medium_h1">
                     Услуги
@@ -110,7 +109,7 @@ export const Services = () => {
                     </div>
                 </div>
 
-            </div>
+            </section>
         </>
     );
 };

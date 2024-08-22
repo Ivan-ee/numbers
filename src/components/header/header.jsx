@@ -33,8 +33,8 @@ export const Header = () => {
     useSmoothScroll(headerRef);
 
     return (
-        <div className="header" ref={headerRef}>
-            <div className="page-container">
+        <header className="header" ref={headerRef}>
+            <nav className="page-container">
                 <div className={'header-pc'}>
                     <div data-id={'#main'} className={'logo medium_h5'}>Numbers</div>
                     <div className={'buttons medium_h5'}>
@@ -44,8 +44,8 @@ export const Header = () => {
                     </div>
                     <div data-id={'#contact'} className={'special-btn medium_h5'}>Контакты</div>
                 </div>
-            </div>
-            <div className={`header-mobile ${isOpen ? 'active' : ''}`}>
+            </nav>
+            <nav className={`header-mobile ${isOpen ? 'active' : ''}`}>
                 <div className={'main'}>
                     <div className={'logo medium_h5'} data-id={'#main'}>Numbers</div>
                     <div className={'arrow'} onClick={() => setIsOpen(!isOpen)}>
@@ -76,7 +76,7 @@ export const Header = () => {
                         onClick={() => setIsOpen(!isOpen)}>Контакты
                     </div>
                 </div>
-            </div>
-        </div>
+            </nav>
+        </header>
     );
 };

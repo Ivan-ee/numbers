@@ -14,7 +14,7 @@ export const Process = () => {
     const viewport = {once: true, amount: 0}
 
     return (
-        <div className="page-container process">
+        <section className="page-container process">
             <div className="title medium_h1">
                 Процесс
             </div>
@@ -118,6 +118,6 @@ export const Process = () => {
                     </div>
                 </motion.div>
             </div>
-        </div>
+        </section>
     )
 };

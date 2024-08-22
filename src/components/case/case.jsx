@@ -74,7 +74,7 @@ export const Case = () => {
     };
 
     return (
-        <div className="page-container case" id={'case'}>
+        <section className="page-container case" id={'case'}>
             <div className="title medium_h1">
                 Кейсы
             </div>
@@ -135,6 +135,6 @@ export const Case = () => {
                     )}
                 </AnimatePresence>
             </div>
-        </div>
+        </section>
     );
 };

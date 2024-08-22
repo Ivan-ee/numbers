@@ -14,7 +14,7 @@ export const Main = () => {
     };
 
     return (
-        <div className="page-container main-container" id={'main'}>
+        <main className="page-container main-container" id={'main'}>
             <div className="mobile">
                 <motion.div
                     initial="hidden"
@@ -84,10 +84,10 @@ export const Main = () => {
                     transition={{
                         delay: 1.5,
                         duration: 0.8,
-                        ease: [0.42, 0, 0.58, 1], // Более плавная кривая Безье (эквивалент "easeInOut")
-                        type: "spring", // Включение пружинной анимации
-                        damping: 20, // Уменьшить значение, чтобы анимация была более плавной и менее "жесткой"
-                        stiffness: 70, // Снизить жесткость для более мягкой анимации
+                        ease: [0.42, 0, 0.58, 1],
+                        type: "spring",
+                        damping: 20,
+                        stiffness: 70,
                         restDelta: 0.001
                     }}
                     className="block orange-block  medium_h3">
@@ -98,10 +98,10 @@ export const Main = () => {
                     transition={{
                         delay: 0.8,
                         duration: 0.8,
-                        ease: [0.42, 0, 0.58, 1], // Более плавная кривая Безье (эквивалент "easeInOut")
-                        type: "spring", // Включение пружинной анимации
-                        damping: 20, // Уменьшить значение, чтобы анимация была более плавной и менее "жесткой"
-                        stiffness: 70, // Снизить жесткость для более мягкой анимации
+                        ease: [0.42, 0, 0.58, 1],
+                        type: "spring",
+                        damping: 20,
+                        stiffness: 70,
                         restDelta: 0.001
                     }}
                     className="block red-block medium_h3">
@@ -112,16 +112,16 @@ export const Main = () => {
                     transition={{
                         delay: 0.2,
                         duration: 0.8,
-                        ease: [0.42, 0, 0.58, 1], // Более плавная кривая Безье (эквивалент "easeInOut")
-                        type: "spring", // Включение пружинной анимации
-                        damping: 20, // Уменьшить значение, чтобы анимация была более плавной и менее "жесткой"
-                        stiffness: 70, // Снизить жесткость для более мягкой анимации
+                        ease: [0.42, 0, 0.58, 1],
+                        type: "spring",
+                        damping: 20,
+                        stiffness: 70,
                         restDelta: 0.001
                     }}
                     className="block green-block medium_h3">
                     <div className="text">Дизайн</div>
                 </motion.div>
             </div>
-        </div>
+        </main>
     );
 };
