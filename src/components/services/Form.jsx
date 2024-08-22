@@ -138,14 +138,7 @@ export const Form = ({show, onCloseButtonClick, type, color, onSuccess}) => {
                                     className={`input ${errors.phone ? 'error' : ''}`}
                                     onChange={(e) => setPhone(e.target.value)}
                                     onFocus={() => handleFocus('phone')}/>
-                                {/*<input*/}
-                                {/*    type="tel"*/}
-                                {/*    className={`input ${errors.phone ? 'error' : ''}`}*/}
-                                {/*    placeholder="Телефон"*/}
-                                {/*    value={phone}*/}
-                                {/*    onChange={(e) => setPhone(e.target.value)}*/}
-                                {/*    onFocus={() => handleFocus('phone')}*/}
-                                {/*/>*/}
+
                                 <input
                                     type="text"
                                     className="input"

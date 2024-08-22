@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {motion, AnimatePresence} from 'framer-motion';
 
-export const SuccessModal = ({show, onClose}) => {
+export const SuccessModal = ({show, onClose, initial}) => {
     const handleOverlayClick = (e) => {
         e.stopPropagation();
         onClose();
@@ -18,7 +18,7 @@ export const SuccessModal = ({show, onClose}) => {
                 <motion.div
                     className="modal-wrapper-s"
                     onClick={handleOverlayClick}
-                    initial={{opacity: 1}}
+                    initial={{opacity: initial}}
                     animate={{opacity: 1}}
                     exit={{opacity: 0}}
                     transition={{duration: 0.4}}

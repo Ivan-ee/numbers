@@ -1,22 +1,26 @@
-import telegram from '../../assets/images/footer/telegram.png'
-import React, {useState} from "react";
-import {SuccessModal} from "../Success.jsx";
+import React, { useState } from "react";
 import InputMask from "react-input-mask";
-
+import { SuccessModal } from "../Success.jsx";
+import telegram from '../../assets/images/footer/telegram.png';
+import ReactLoading from "react-loading";
 
 export const Footer = () => {
     const currentYear = new Date().getFullYear();
 
-    const [isSuccessModalVisible, setSuccessModalVisible] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
+    const [isSuccessModalVisible, setSuccessModalVisible] = useState(false);
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
+    const [company, setCompany] = useState('');
+    const [email, setEmail] = useState('');
+    const [description, setDescription] = useState('');
     const [errors, setErrors] = useState({
         name: false,
         phone: false,
     });
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         const newErrors = {
             name: !name,
             phone: !phone,
@@ -24,8 +28,36 @@ export const Footer = () => {
         setErrors(newErrors);
 
         if (!newErrors.name && !newErrors.phone) {
-            setSuccessModalVisible(true)
-            console.log({name, phone});
+            setIsLoading(true);
+            try {
+                const response = await fetch('http://localhost:3000/tgbot/add', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        title: 'Обсуждение проекта',
+                        data: {
+                            name,
+                            phone,
+                            company: company || undefined,
+                            email: email || undefined,
+                            description: description || undefined,
+                        }
+                    }),
+                });
+
+                if (!response.ok) {
+                    throw new Error('Сервер вернул ошибку');
+                }
+
+                const result = await response.json();
+                console.log(result);
+                setSuccessModalVisible(true);
+                setIsLoading(false);
+            } catch (error) {
+                console.error('Ошибка при отправке заявки:', error);
+            }
         }
     };
 
@@ -42,7 +74,7 @@ export const Footer = () => {
 
     return (
         <>
-            <SuccessModal show={isSuccessModalVisible} onClose={handleCloseSuccessModal}/>
+            <SuccessModal show={isSuccessModalVisible} onClose={handleCloseSuccessModal} initial={0} />
 
             <div className="footer-container">
                 <footer className="page-container footer" id={'contact'}>
@@ -53,7 +85,7 @@ export const Footer = () => {
                         </div>
                         <div className="bottom medium_h5">
                             <div>© Numbers, {currentYear}</div>
-                            <img src={telegram} alt={telegram} className="image"/>
+                            <img src={telegram} alt="telegram" className="image"/>
                         </div>
                     </div>
                     <div className={'form'}>
@@ -76,15 +108,31 @@ export const Footer = () => {
                                 mask="+7 (999) 999-99-99"
                                 className={`input ${errors.phone ? 'error' : ''}`}
                                 onChange={(e) => setPhone(e.target.value)}
-                                onFocus={() => handleFocus('phone')}/>
-                            <input className={'input'} placeholder={'Компания'}/>
-                            <input className={'input'} placeholder={'Почта'}/>
+                                onFocus={() => handleFocus('phone')}
+                            />
+                            <input
+                                className={'input'}
+                                placeholder={'Компания'}
+                                value={company}
+                                onChange={(e) => setCompany(e.target.value)}
+                            />
+                            <input
+                                className={'input'}
+                                placeholder={'Почта'}
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
                         </div>
                         <div className="title medium_h4">
                             Проект
                         </div>
                         <div className={'block'}>
-                            <textarea placeholder={"Опишите задачу"} className={'input textarea'}/>
+                            <textarea
+                                placeholder={"Опишите задачу"}
+                                className={'input textarea'}
+                                value={description}
+                                onChange={(e) => setDescription(e.target.value)}
+                            />
                         </div>
                         <div className={'form-bottom'}>
                             <div className={'text'}>
@@ -92,13 +140,14 @@ export const Footer = () => {
                                 на <span>обработку персональных данных</span>
                             </div>
                             <div className={'button medium_h4'} onClick={handleSubmit}>
-                                <div>Отправить</div>
+                                <div> {isLoading ?
+                                    <ReactLoading type={'spinningBubbles'} color="#fff" height={18}
+                                                  width={24}/> : 'Отправить'}</div>
                             </div>
                         </div>
                     </div>
                 </footer>
             </div>
         </>
-
     );
 };
