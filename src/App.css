@@ -144,7 +144,7 @@
 
 .header {
     position: relative;
-    top: -1px;
+    top: 0px;
 
     z-index: 9;
 
@@ -990,7 +990,8 @@
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background-color: rgba(107, 114, 128, 0.5);
+    background-color: rgba(0, 0, 0, 0.48);
+    backdrop-filter: blur(20px);
     z-index: 9;
     width: 100%;
     min-height: 100vh;
