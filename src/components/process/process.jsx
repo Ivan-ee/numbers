@@ -82,7 +82,7 @@ export const Process = () => {
 
                     </div>
                     <div className="text medium_h4">
-                        Подключаем и настраиваем серивисы
+                        Подключаем и настраиваем сервисы
                     </div>
                 </motion.div>
                 <motion.div className="block"
