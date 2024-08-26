@@ -53,24 +53,15 @@
                 background: linear-gradient(
                         to right,
                         #51C89E 0%,
-                        #52CC81 4%,       /* Плавный переход от зеленого к следующему оттенку */
-                        #63D06B 8%,
+                        #52CC81 4%, /* Плавный переход от зеленого к следующему оттенку */ #63D06B 8%,
                         #7BDB7D 12%,
-                        #80CB57 16%,      /* Основной зеленый */
-                        #A1CC63 20%,      /* Переходный цвет между зеленым и желтым */
-                        #C1D36F 24%,
+                        #80CB57 16%, /* Основной зеленый */ #A1CC63 20%, /* Переходный цвет между зеленым и желтым */ #C1D36F 24%,
                         #E0DA7A 28%,
-                        #FFD80D 32%,      /* Основной желтый */
-                        #FFC357 36%,      /* Переходный цвет между желтым и оранжевым */
-                        #FFAC92 40%,
-                        #FF8451 44%,      /* Основной оранжевый */
-                        #F47764 48%,      /* Плавный переход от оранжевого к красному */
-                        #ED6F87 52%,
+                        #FFD80D 32%, /* Основной желтый */ #FFC357 36%, /* Переходный цвет между желтым и оранжевым */ #FFAC92 40%,
+                        #FF8451 44%, /* Основной оранжевый */ #F47764 48%, /* Плавный переход от оранжевого к красному */ #ED6F87 52%,
                         #E15D8A 56%,
-                        #F86D72 60%,      /* Основной красный */
-                        #ED6F87 64%,      /* Переходный цвет между красным и зеленым */
-                        #7D4E6B 68%,
-                        #51C89E 76%       /* Возвращение к основному зеленому */
+                        #F86D72 60%, /* Основной красный */ #ED6F87 64%, /* Переходный цвет между красным и зеленым */ #7D4E6B 68%,
+                        #51C89E 76% /* Возвращение к основному зеленому */
                 );
 
 
@@ -907,7 +898,7 @@
             .input {
                 border-radius: 8px;
 
-                font-family: "TT Norms", Verdana, Geneva, Tahoma, sans-serif!important;
+                font-family: "TT Norms", Verdana, Geneva, Tahoma, sans-serif !important;
 
                 color: var(--color-black);
 
@@ -1113,7 +1104,7 @@
 
         }
 
-        .pc{
+        .pc {
             display: none;
         }
     }
@@ -1276,7 +1267,7 @@
             overflow: hidden;
             height: calc(100vh - 69px);
 
-            .title{
+            .title {
                 font-weight: 500;
                 font-size: 64px;
 
@@ -1290,24 +1281,15 @@
                 background: linear-gradient(
                         to right,
                         #51C89E 0%,
-                        #52CC81 4%,       /* Плавный переход от зеленого к следующему оттенку */
-                        #63D06B 8%,
+                        #52CC81 4%, /* Плавный переход от зеленого к следующему оттенку */ #63D06B 8%,
                         #7BDB7D 12%,
-                        #80CB57 16%,      /* Основной зеленый */
-                        #A1CC63 20%,      /* Переходный цвет между зеленым и желтым */
-                        #C1D36F 24%,
+                        #80CB57 16%, /* Основной зеленый */ #A1CC63 20%, /* Переходный цвет между зеленым и желтым */ #C1D36F 24%,
                         #E0DA7A 28%,
-                        #FFD80D 32%,      /* Основной желтый */
-                        #FFC357 36%,      /* Переходный цвет между желтым и оранжевым */
-                        #FFAC92 40%,
-                        #FF8451 44%,      /* Основной оранжевый */
-                        #F47764 48%,      /* Плавный переход от оранжевого к красному */
-                        #ED6F87 52%,
+                        #FFD80D 32%, /* Основной желтый */ #FFC357 36%, /* Переходный цвет между желтым и оранжевым */ #FFAC92 40%,
+                        #FF8451 44%, /* Основной оранжевый */ #F47764 48%, /* Плавный переход от оранжевого к красному */ #ED6F87 52%,
                         #E15D8A 56%,
-                        #F86D72 60%,      /* Основной красный */
-                        #ED6F87 64%,      /* Переходный цвет между красным и зеленым */
-                        #7D4E6B 68%,
-                        #51C89E 76%       /* Возвращение к основному зеленому */
+                        #F86D72 60%, /* Основной красный */ #ED6F87 64%, /* Переходный цвет между красным и зеленым */ #7D4E6B 68%,
+                        #51C89E 76% /* Возвращение к основному зеленому */
                 );
 
                 background-size: 600vw 600vw;
@@ -1336,7 +1318,8 @@
                 max-width: 210px;
                 height: 330px;
 
-                bottom: 163px; //bottom: 396px;
+                bottom: 163px;
+            /*/ / bottom: 396 px;*/
                 left: 60px;
 
                 background: linear-gradient(to right, #51C89E 0%, #52CC81 20%, #63D06B 40%, #63D06B 60%, #80CB57 80%, #90D056 100%) !important;
@@ -1381,6 +1364,7 @@
 
     .header {
         position: sticky;
+
         .header-mobile {
             display: none;
         }
@@ -1474,10 +1458,18 @@
 
             .block:nth-child(2) {
                 grid-area: second-block;
+
+                .image {
+                    height: 171px;
+                }
             }
 
             .block:nth-child(3) {
                 grid-area: third-block;
+
+                .image {
+                    height: 171px;
+                }
             }
 
         }
@@ -1826,7 +1818,7 @@
 
         .pc {
 
-            .title{
+            .title {
                 left: 70px;
                 bottom: -200px;
 
@@ -1836,7 +1828,7 @@
                 border-radius: 32px;
                 padding: 32px;
 
-                .text{
+                .text {
                     font-size: 24px !important;
                 }
             }
@@ -1881,6 +1873,22 @@
 
         }
     }
+
+    .services {
+        .content {
+            .block:nth-child(2) {
+                .image {
+                    height: 203px;
+                }
+            }
+
+            .block:nth-child(3) {
+                .image {
+                    height: 203px;
+                }
+            }
+        }
+    }
 }
 
 
@@ -1914,6 +1922,18 @@
                     margin-bottom: 96px;
                 }
 
+            }
+
+            .block:nth-child(2) {
+                .image{
+                    height:264px;
+                }
+            }
+
+            .block:nth-child(3) {
+                .image {
+                    height:264px;
+                }
             }
 
         }
@@ -1954,11 +1974,11 @@
         }
     }
 
-    .process{
-        .content{
-            .block{
-                .text{
-                    font-size: 24px!important;
+    .process {
+        .content {
+            .block {
+                .text {
+                    font-size: 24px !important;
                 }
             }
         }
@@ -2020,7 +2040,7 @@
 
         .pc {
 
-            .title{
+            .title {
                 left: 90px;
                 bottom: -200px;
 
@@ -2032,7 +2052,7 @@
                 border-radius: 32px;
                 padding: 32px;
 
-                .text{
+                .text {
                     font-size: 36px !important;
                 }
             }
@@ -2050,7 +2070,7 @@
             .red-block {
                 position: relative;
 
-                padding: 48px!important;
+                padding: 48px !important;
 
                 max-width: 420px;
                 height: 420px;

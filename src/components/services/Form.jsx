@@ -68,7 +68,7 @@ export const Form = ({show, onCloseButtonClick, type, color, onSuccess}) => {
             };
 
             try {
-                // const response = await fetch('http://localhost:8000/application/add/c0d60fc41dbacf12d4ccf22925ed512ea276c32fd43fe6cee14f5148d42df009', {
+                // const response = await fetch('http://localhost:8000/order/add/c0d60fc41dbacf12d4ccf22925ed512ea276c32fd43fe6cee14f5148d42df009', {
                 //     method: 'POST',
                 //     headers: {
                 //         'Content-Type': 'application/json',
