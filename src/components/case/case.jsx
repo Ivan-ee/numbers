@@ -25,20 +25,20 @@ export const Case = () => {
             description: "Сайт по приему платежей",
             url: "https://paylay.ru/"
         },
-        {
-            id: 3,
-            image: image3,
-            title: "Construct",
-            description: "Строительный магазин",
-            url: null // Нет ссылки
-        },
-        {
-            id: 4,
-            image: image4,
-            title: "Clestore",
-            description: "Интернет-магазин молодежной одежды",
-            url: null // Нет ссылки
-        }
+        // {
+        //     id: 3,
+        //     image: image3,
+        //     title: "Construct",
+        //     description: "Строительный магазин",
+        //     url: null // Нет ссылки
+        // },
+        // {
+        //     id: 4,
+        //     image: image4,
+        //     title: "Clestore",
+        //     description: "Интернет-магазин молодежной одежды",
+        //     url: null // Нет ссылки
+        // }
     ];
 
     const handleKeyDown = (e) => {
@@ -68,7 +68,6 @@ export const Case = () => {
         if (url) {
             setSelectedId(id);
         } else {
-            // Можно добавить действие для кейсов без ссылки, если нужно
             console.log("Нет ссылки для открытия модального окна.");
         }
     };
