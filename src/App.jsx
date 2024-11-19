@@ -15,7 +15,6 @@ function App() {
             <Main />
             <Services />
             <Process />
-            <Case />
             <QA />
             <Footer />
         </StrictMode>

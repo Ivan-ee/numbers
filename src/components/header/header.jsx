@@ -39,7 +39,7 @@ export const Header = () => {
                     <div data-id={'#main'} className={'logo medium_h5'}>Numbers</div>
                     <div className={'buttons medium_h5'}>
                         <div data-id={'#service'} className={'button'}>Услуги</div>
-                        <div data-id={'#case'} className={'button'}>Кейсы</div>
+                        {/*<div data-id={'#case'} className={'button'}>Кейсы</div>*/}
                         <div data-id={'#qa'} className={'button'}>Вопросы</div>
                     </div>
                     <div data-id={'#contact'} className={'special-btn medium_h5'}>Контакты</div>

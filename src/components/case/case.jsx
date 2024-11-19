@@ -26,7 +26,7 @@ export const Case = () => {
             url: "https://paylay.ru/"
         },
         // {
-        //     id: 3,
+        //     id: 3,ч
         //     image: image3,
         //     title: "Construct",
         //     description: "Строительный магазин",
