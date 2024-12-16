@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* Document
    ========================================================================== */
 
@@ -362,35 +364,35 @@ template {
 
 body {
   font-variant-ligatures: none;
-  font-family: "TT Norms", Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .medium_h1 {
-  font-family: "TT Norms", Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
   font-size: 36px !important;
   font-weight: 500 !important;
 }
 
 .medium_h2 {
-  font-family: "TT Norms", Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
   font-size: 24px !important;
   font-weight: 500 !important;
 }
 
 .medium_h3 {
-  font-family: "TT Norms", Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px !important;
   font-weight: 500 !important;
 }
 
 .medium_h4 {
-  font-family: "TT Norms", Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px !important;
   font-weight: 500 !important;
 }
 
 .medium_h5 {
-  font-family: "TT Norms", Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
   font-size: 14px !important;
   font-weight: 500 !important;
 }
