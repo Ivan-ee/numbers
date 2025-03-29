@@ -85,7 +85,9 @@ export const Footer = () => {
                         </div>
                         <div className="bottom medium_h5">
                             <div>© Numbers, {currentYear}</div>
-                            <img src={telegram} alt="telegram" className="image"/>
+                            <a href={'https://t.me/RodionOpryshko'}>
+                                <img src={telegram} alt="telegram" className="image"/>
+                            </a>
                         </div>
                     </div>
                     <div className={'form'}>
